@@ -1,0 +1,61 @@
+# Můj příběh (about.html)
+
+> Pozn. k editaci: Opraveny překlepy a gramatika, hlas a styl autora zachován beze změny.
+> H1 = "Můj příběh" (v originále chybně H3). Doplnit meta-description (v originále prázdná) — návrh dole.
+
+**Navržená meta-description:** Příběh Ondřeje Pelikána ze Třinácti řemesel — jak se z Pražáka stal venkovský samouk, který opravuje staré chalupy, seče kosou a učí lidi žít na venkově svépomocí a bez milionů.
+
+---
+
+## H1: Můj příběh
+
+### Kde jsem se vzal?
+
+Narodil jsem se ještě za komunistů v Praze. Tam jsem i vyrostl a studoval, ale od jinošských let mě to táhlo na venkov k chalupám. Asi to mám po předcích, kteří všichni přišli do města z venkova. Měl jsem vždycky rád prostor, krajinu, stromy, staré domy, řemesla. A stavění a opravování. Zpětně je mi líto, že jsem se nevyučil třeba zedníkem už v patnácti a musel jsem to dohánět o deset let později. Na druhou stranu, v dospělosti člověk studuje s větší poctivostí než zamlada.
+
+Všechno ale začalo před mnoha lety, kdy jsem si jako pětadvacetiletý z nevelkého dědictví koupil starou chalupu na Sedlčansku. A nevěděl jsem o chalupách a stavitelství vpodstatě nic. Žádný velký průšvih to naštěstí nebyl — střechu to mělo, voda a odpady na hranici pozemku, a vlastně to byla jen taková roztomilá pastouška. Takže jsem si ještě půjčil od táty pět tisíc, co mi chybělo do kupní ceny a na pivo, a hned jsem tam v den podpisu smlouvy spal. A věci se začaly dít.
+
+Chodili kolem sousedi koukat na toho blázna, co koupil mokrou chalupu, dohromady nepozná skoro hrábě od vidlí (přeháním) a chce kupovat maltu v pytlích jako ve městě. Nejdřív jsem chtěl spadlý strop nahradit sádrokartonem, do vjezdu dát zatravňovací zámkovou dlažbu a tak… Vlastně mě a chalupu (která se ukázala být celkem vzácná, z roku 1792) zachránil nedostatek peněz a obliba čtení naučné literatury po večerech. Natrefil jsem na Jiřího Škabradu a jemu podobné autory a rychle pochopil, že stará chalupa je organismus, který se musí poznat a respektovat. A hlavně s ním bydlet, topit tam a opravovat, co opravdu padá a hoří, a nervat zbytečně peníze do nesmyslů. Protože jinak se tam utopí třeba 20 mega. To jsem naštěstí neměl.
+
+Postupně jsem se tedy učil jedno řemeslo za druhým — od kopání drenáží, připojení na kanalizaci, bezpečné demolice a stavby stropů, opravy kamen, dlažby z kamení, suché zídky, elektroinstalace… S něčím poradili nakonec ti sousedi, táta, nebo jsem na jednu zeď pozval zedníka a koukal, jak ji nahazuje a jak musí vypadat malta, aby držela a nespadla druhý den na zem. Tam už jsem ale pochopil, že málokterý dnešní zedník umí stavět „postaru". Dnes frčí pěna, ytong a polystyren, a ten, kdo umí vzít cihlu do ruky a nepoužívá přespříliš cementu, většinou nemá čas, nebo ho neumím zaplatit. Takže jsem se učil a do všeho se pouštěl sám.
+
+Myslel jsem, že v této chalupě už zůstanu, ale věci nabraly další spád, když jsem potkal ženu svého života a začali jsme početně přibývat.
+
+Dokonce se říká, že člověk má první dům prodat, protože se to na něm naučí a na dalším už dělá všechno líp. To se tedy stalo a pořídili jsme poblíž už solidní usedlost z přelomu století, pěkně se stodolou, maštalí a dvorem, k tomu ovocný sad, kus lesa, rybník, louku…
+
+A všichni nás začali litovat. Jak to na tom konci světa, bez peněz a s hromadou dětí, jako chceme dát do kupy. Z počátku mě taky poléval pot, jestli jsme se nenavezli do průšvihu. Ale nakonec jsem zhodnotil všechny dříve nabyté zkušenosti a prostor mi připravil spoustu dalších příležitostí ke vzdělávání. Hlavně jsem přistoupil na to, že to sám nikdy nedodělám, možná moje děti, ale důležité je udělat si pěkný příbytek a život, nebydlet na stavbě.
+
+Vzhledem k tomu, že jsme přišli najednou k hektaru ploch, které je potřeba udržovat, bál jsem se, že budu muset koupit několik různých sekaček a budou nám vrčet pod okny od rána do večera. Moje žena na to říkala: to přece budeš síct kosou, ne? Tak jsem se jako obvykle velmi do hloubky ponořil do sečení kosou, pochopil, že to skutečně je stejně rychlé jako sekačkou (nepočítám hrabání a práci velkým traktorem), a navíc jako bonus je to dobré pro hmyz, květenu a stromy v sadu. Dobře, kosy mám teď tři, ale pořád to zvládám bezemisně a potichu, když sousedi už spí, a ještě se pěkně protáhnu. Ale pozor, s kosou po dědovi to nejspíš nepůjde. Naši předci se překvapivě hodně dřeli. Dnes už jsou rakouské kosy skutečný hightech.
+
+V novém domě nebyla pořádně ani voda, žádná kanalizace. Takže jsme vlastně museli tyto věci řešit od začátku, opět bez milionů na účtě a se čtyřmi dětmi na kamnech. Po nastěhování natrvalo jsem pronikl do tajů přípravy palivového dříví (ano, můžete si koupit rovnou i sušený štípaný buk za 3 tisíce za kubík a mít to z krku), naučil se dříví štípat ručně v metrech, sušit tak, aby pěkně vystačilo na celou zimu. Každý rok takhle vyrobím v lese asi 12 m³ — v nákladech je jen benzín do pil a záda. (V příštím životě si postavím slaměný pasivní dům, kde se spálí dva kubíky dřeva za rok.)
+
+Od začátku hodně sázíme stromy, keře, děláme záhony. Držíme se permakulturních principů v kombinaci s tradičními postupy předků. Na kurzech řezu ovocných stromů a roubování jsem se zase ponořil do dalšího oboru, ležel v ovocnářských knihách a nyní to skutečně přináší ovoce. První výsadbu sežraly myši a srny, ale už vím, jak na ně (tím nemyslím flintu a jed).
+
+Když se člověk odstěhuje z města na konec světa, kde v sousedství je jen pár staříků, musí se ještě s větším důrazem dovzdělat. Umět si svařit prasklé kolečko, vidle, ohoblovat prkna, opravit motor traktůrku. Nejde prostě pořád za někým chodit nebo za to platit.
+
+Postupně za mnou přicházeli kamarádi a známí, i pár cizích lidí, abych poradil, co s tou mokrou zdí, jakou si mají koupit pilu, kde koupit stromky, jaké vybrat odrůdy, co je lesní zákon, kam dát žumpu a kdy spadne jejich stodola.
+
+Tak vznikl tenhle projekt Třináct řemesel, nebo třeba kurzy všeho.
+
+Rád bych zdůraznil, že nejsem vesnický kutil. U každého řemesla jdu několik měsíců nebo let do hloubky, jak jen to jde. Bavím se s pamětníky, odborníky, čtu odbornou literaturu, chodím na kurzy a školení.
+
+A když si nejsem jist prasklinou ve zdi, volám statika, najdeme řešení a to se dá už často provést svépomocí. Samozřejmě nesvářím železo jako fachman, co to dělá celý život, neseču kosou rychle jako mistr republiky a nepoznám všechny odrůdy jablek. Třeba taková pomologie je opravdu věda pro lidi, co nedělají nic jiného, než že tráví všechen čas mezi ovocem. To radši pošlu hrušku poštou odborníkovi, než abych pátral po starých odrůdách ve vzácné literatuře.
+
+Na druhou stranu truhlářství nebo zednictví si podle mě může ochočit každý průměrně šikovný člověk. Pro běžný život stačí jít dejme tomu do půlky znalostí, umět posíct zahradu a svařit hrábě, aby dál hrabaly.
+
+Ale hlavně se nenadřít, nezničit a nepropadat depresím, že to nejde, a nečekat, až miliony spadnou z nebe.
+
+Netroufám si tvrdit, že jsem nejlepším odborníkem na všechno. Ale znám ty skutečné mistry svých řemesel a můžu vám zprostředkovat jejich učení, knihy a um.
+
+---
+
+### Výběr ze vzdělání, praxe a zkušeností
+
+- **2004–2008** Studium fotografie na SPŠG Hellichova
+- **2012** Koupě první vlastní chalupy
+- **2014** Práce v Muzeu vesnických staveb Vysoký Chlumec
+- **2016** Kurz památkové péče od NPÚ (semestr)
+- **2018** Truhlářský kurz Jeseník, Jan Mareček
+- **2019** Koupě usedlosti k životu s rodinou
+- **2024** Kurz řezu ovocných stromů, extenzivní ovocnářství, Chříč — Ing. Ondřej Dovala; Kurz roubování a řezu ovocných stromů, Brtec — Ing. Zdeněk Buzek
+- **2025** Kurz práce s vápnem — sgrafito, Ing. Dagmar Michoinová, Ph.D.
