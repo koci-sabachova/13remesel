@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node build.js",
-    "serve": "cd dist && python3 -m http.server 8000"
+    "build:ghpages": "BASE_PATH=/13remesel node build.js",
+    "serve": "cd docs && python3 -m http.server 8000"
   }
 }

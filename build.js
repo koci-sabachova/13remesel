@@ -11,6 +11,24 @@ const PARTIALS = join(ROOT, '_partials');
 const ASSETS = join(ROOT, 'assets');
 const DIST = join(ROOT, 'docs');
 const SITE_URL = 'https://trinactremesel.cz';
+const BASE_PATH = process.env.BASE_PATH || '';
+
+function prefixUrls(html) {
+  if (!BASE_PATH) return html;
+  // href, src, content attributes — absolutní URLs (začínají /)
+  html = html.replace(/(href|src|content)=(["'])\/(?!\/)/g, `$1=$2${BASE_PATH}/`);
+  // srcset má více URL oddělených čárkami
+  html = html.replace(/(srcset)=(["'])([^"']+)\2/g, (m, attr, q, value) => {
+    const newValue = value.split(',').map(item => {
+      const t = item.trimStart();
+      const leadingSpace = item.slice(0, item.length - t.length);
+      if (t.startsWith('/')) return leadingSpace + BASE_PATH + t;
+      return item;
+    }).join(',');
+    return `${attr}=${q}${newValue}${q}`;
+  });
+  return html;
+}
 
 if (existsSync(DIST)) rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });
@@ -68,7 +86,7 @@ for (const file of pages) {
 
   const outDir = file === 'index.html' ? DIST : join(DIST, slug);
   mkdirSync(outDir, { recursive: true });
-  writeFileSync(join(outDir, 'index.html'), html);
+  writeFileSync(join(outDir, 'index.html'), prefixUrls(html));
 
   sitemap.push(vars.url);
   console.log(`✓ ${vars.url.padEnd(28)} ${(html.length / 1024).toFixed(1)} KB`);
