@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Třináct řemesel — Ondřej Pelikán, Chyšky</title>
+<meta name="description" content="Kurzy venkovských řemesel, hodinový děd a odborné prohlídky nemovitostí před koupí. Ondřej Pelikán, Chyšky.">
+<link rel="canonical" href="https://trinactremesel.cz/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Třináct řemesel — Ondřej Pelikán, Chyšky">
+<meta property="og:description" content="Kurzy venkovských řemesel, hodinový děd a odborné prohlídky nemovitostí před koupí. Ondřej Pelikán, Chyšky.">
+<meta property="og:url" content="https://trinactremesel.cz/">
+<meta property="og:image" content="https://trinactremesel.cz/assets/img/og/og-home.jpg">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+
+<link rel="preload" href="/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/poppins-400-ext.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="stylesheet" href="/assets/css/reset.css">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script src="/assets/js/main.js" defer></script>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Přeskočit na obsah</a>
+<header class="site-header" role="banner">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="/" aria-label="Třináct řemesel — domů">
+      <img src="/assets/img/logo.png" width="576" height="144" alt="Třináct řemesel" class="site-header__logo">
+    </a>
+    <button class="site-header__toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+      <span class="visually-hidden">Otevřít menu</span>
+      <span aria-hidden="true">≡</span>
+    </button>
+    <nav id="primary-nav" class="site-header__nav" aria-label="Hlavní">
+      <ul>
+        <li><a href="/">Domov</a></li>
+        <li><a href="/muj-pribeh/">Můj příběh</a></li>
+        <li><a href="/trinacte-remeslo/">Třinácté řemeslo</a></li>
+        <li><a href="/#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://trinactremesel.cz/#business",
+      "name": "Třináct řemesel",
+      "alternateName": "13 řemesel",
+      "description": "Kurzy venkovských řemesel, hodinový děd a odborné prohlídky nemovitostí před koupí. Ondřej Pelikán, Chyšky.",
+      "url": "https://trinactremesel.cz/",
+      "telephone": "+420776700801",
+      "email": "ondrej@trinactremesel.cz",
+      "identifier": { "@type": "PropertyValue", "propertyID": "ICO", "value": "87057239" },
+      "image": "https://trinactremesel.cz/assets/img/og/og-home.jpg",
+      "priceRange": "500–13000 Kč",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chyšky 1",
+        "postalCode": "399 01",
+        "addressLocality": "Chyšky – Ratibořec",
+        "addressRegion": "Jihočeský kraj",
+        "addressCountry": "CZ"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Jihočeský kraj" },
+        { "@type": "AdministrativeArea", "name": "Středočeský kraj" },
+        { "@type": "AdministrativeArea", "name": "Kraj Vysočina" }
+      ],
+      "founder": { "@id": "https://trinactremesel.cz/#ondrej" },
+      "makesOffer": [
+        { "@id": "https://trinactremesel.cz/#offer-natuknout" },
+        { "@id": "https://trinactremesel.cz/#offer-grunt" },
+        { "@id": "https://trinactremesel.cz/#offer-glajcha" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://trinactremesel.cz/#ondrej",
+      "name": "Ondřej Pelikán",
+      "jobTitle": "Hodinový děd, lektor řemesel a odborný prohlížitel nemovitostí",
+      "worksFor": { "@id": "https://trinactremesel.cz/#business" },
+      "url": "https://trinactremesel.cz/muj-pribeh/"
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://trinactremesel.cz/#offer-natuknout",
+      "name": "Jen to naťuknout",
+      "description": "Krátká konzultace nebo úvod do jednoho z řemesel.",
+      "price": "500",
+      "priceCurrency": "CZK",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@id": "https://trinactremesel.cz/#business" }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://trinactremesel.cz/#offer-grunt",
+      "name": "Setkání Grunt",
+      "description": "Celodenní setkání nebo odborná prohlídka nemovitosti.",
+      "price": "7000",
+      "priceCurrency": "CZK",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@id": "https://trinactremesel.cz/#business" }
+    },
+    {
+      "@type": "Offer",
+      "@id": "https://trinactremesel.cz/#offer-glajcha",
+      "name": "Grunt i glajcha",
+      "description": "Komplexní balíček — odborná prohlídka, doprovod a poradenství.",
+      "price": "13000",
+      "priceCurrency": "CZK",
+      "availability": "https://schema.org/InStock",
+      "seller": { "@id": "https://trinactremesel.cz/#business" }
+    }
+  ]
+}
+</script>
+<main id="main">
+
+  <section class="hero">
+    <picture class="hero__bg" aria-hidden="true">
+      <source type="image/avif" srcset="/assets/img/hero-home-480.avif 480w, /assets/img/hero-home-960.avif 960w, /assets/img/hero-home-1600.avif 1600w" sizes="100vw">
+      <img src="/assets/img/hero-home-1600.jpg" srcset="/assets/img/hero-home-480.jpg 480w, /assets/img/hero-home-960.jpg 960w, /assets/img/hero-home-1600.jpg 1600w" sizes="100vw" alt="" width="1600" height="1081" fetchpriority="high" decoding="async">
+    </picture>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Třináct řemesel</h1>
+      <p class="hero__lead">Dělám kurzy všeho. Všeho, co vím a co vy potřebujete vědět. Provedu vás všemi záludnostmi života mimo město. Od výběru domu po uchování ovoce. Budu váš hodinový děd.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="tel:+420776700801">Zavolat 776 700 801</a>
+        <a class="btn btn--ghost" href="mailto:ondrej@trinactremesel.cz">Napsat e-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container crafts">
+    <h2 class="crafts__heading">K čemu Vám budu?</h2>
+    <p class="crafts__lead">Dvanáct a jedno řemeslo, kterými spolu můžeme projít.</p>
+
+    <article class="craft" id="zednictvi">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/zednictvi-480.avif 480w, /assets/img/zednictvi-960.avif 960w, /assets/img/zednictvi-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/zednictvi-960.jpg" srcset="/assets/img/zednictvi-480.jpg 480w, /assets/img/zednictvi-960.jpg 960w, /assets/img/zednictvi-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Stavební platforma a práce s elektrickým nářadím." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">1</p>
+        <h3>Zednictví</h3>
+        <p class="craft__lead">Nemůžete na to nikoho sehnat? Většina zednických prací se dá udělat svépomocí, a to od lití podlah po nahození zdí. Chce to dobrý materiál, nářadí a hlavně se toho nebát.</p>
+        <p class="craft__tag">Naučím vás zedničit. Co se postaví s láskou, drží, i když padá.</p>
+        <p>Je to hodně o čase a šikovnosti. Bourání opravdu není věc, na kterou si musíte při dobrém zdraví někoho zvát. Maximálně se riskantnější operace zkonzultují se statikem. Naučím vás namíchat pořádnou vápennou maltu, klidně bez cementu, nahodit zeď nebo obložit sprchový kout. Vážím si zručnosti našich předků. Starý dům často nesnese moderní materiály, nevhodné řešení vám brzy vrátí solným výkvětem na zdi za postelí. Ale jsou případy, kdy i ytong nebo montovaná příčka jsou fajn — snažím se je ale alespoň vizuálně zamaskovat a používat v nejnutnějším minimu.</p>
+        <p>Znám rozumné statiky, co se vyjádří k vaší obávané prasklině ve zdi. Buďte v klidu, staré domy padají dlouho.</p>
+        <p>Pokud chcete stavět fakt přírodně a zadarmo, dá se udělat příbytek ze slámy a hlíny, bydlet v chatě nebo jurtě. Každý má svůj styl a potřeby.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Jaké stavební materiály pro můj dům?</li>
+            <li>Z čeho je naše chalupa a jak navázat?</li>
+            <li>Sádrokarton, nebo rákos?</li>
+            <li>Jak naložit vápno, kde a jak dlouho ho skladovat?</li>
+            <li>Vápenná omítka, nebo hliněná?</li>
+            <li>Praskliny ve zdi, mám se bát?</li>
+            <li>Perlinka, ytong, lepidlo, nebo plná cihla?</li>
+            <li>Přizdívka mokré zdi?</li>
+            <li>Hydroizolace domu — podřezat, nebo jen odkopat?</li>
+            <li>Kolik mě bude stát injektáž a má smysl?</li>
+            <li>Beton do chalupy, ale za jakých podmínek?</li>
+            <li>Má smysl tepelná izolace podlahy a stropů?</li>
+            <li>Provětrávané podlahy — drahé a levné řešení.</li>
+            <li>Suché zídky z místního kamene.</li>
+            <li>Kde koupit pěkné cihly?</li>
+            <li>Chce to statika?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="prohlidka">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/prohlidka-nemovitosti-480.avif 480w, /assets/img/prohlidka-nemovitosti-960.avif 960w, /assets/img/prohlidka-nemovitosti-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/prohlidka-nemovitosti-960.jpg" srcset="/assets/img/prohlidka-nemovitosti-480.jpg 480w, /assets/img/prohlidka-nemovitosti-960.jpg 960w, /assets/img/prohlidka-nemovitosti-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Stará chalupa s loupající se bílou omítkou a obnaženým cihlovým zdivem." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">2</p>
+        <h3>Prohlídka nemovitosti před koupí</h3>
+        <p class="craft__lead">Našli jste dům snů? Teprve přemýšlíte, co koupit? Potřebujete na pár dní mizet z města, nebo jste zdědili chalupu v původním stavu a chcete tam bydlet?</p>
+        <p class="craft__tag">Sjedu tam s vámi před koupí. Najdeme všechny zajíce a tesaříky v pytli.</p>
+        <p>Můžeme se potkat i nad inzeráty a podle vašich možností a schopností si určit, jestli se k vám víc hodí chata, barokní usedlost, nebo radši karavan.</p>
+        <p>Pokud chalupu teprve sháníte nebo vybíráte, sjedu s vámi na prohlídku. Koukneme se na vše od sklepa po krov, odhadnu investice a řeknu vám, jestli vám dům druhý den spadne, nebo je to životní příležitost.</p>
+        <p>Dům může na první pohled vypadat skvěle, ale vždy se podívám i pod pokličku a do skříní. Bez nadsázky se dají rychlou, ale odbornou prohlídkou ušetřit miliony. Viděl jsem už opravdu hodně domů, pozemků, lesů a maringotek. Podle vašich možností a schopností vám poradím, jestli to má smysl, nebo je to jen sen.</p>
+        <p>Je třeba myslet do budoucna. Skvělá barokní sýpka na konci vsi s plánovanou dálnicí za zahradou vás za deset let už moc nepotěší.</p>
+        <p>Koukneme na územní plán, sousedům přes plot, zhodnotíme možnosti vodních zdrojů a budoucích výsadeb.</p>
+      </div>
+    </article>
+
+    <article class="craft" id="voda">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/voda-480.avif 480w, /assets/img/voda-960.avif 960w, /assets/img/voda-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/voda-960.jpg" srcset="/assets/img/voda-480.jpg 480w, /assets/img/voda-960.jpg 960w, /assets/img/voda-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Čištění staré kopané studny." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">3</p>
+        <h3>Voda</h3>
+        <p class="craft__lead">Co s tou studnou? Pitná voda, dešťovka, šedá voda, černá voda. Adaptace na sucho i povodně.</p>
+        <p class="craft__tag">Řekneme si, co se zdrojem vody. Filtrovat vodu ze staré studny, nebo radši vozit kanystry?</p>
+        <p>Voda je zřejmě opravdu základ každého živobytí. Alespoň nějaká. Do maringotky na kopci můžete tahat kanystry, umýt se v rybníku. U domu se už hodí studna, vrt nebo kvalitní uskladnění dešťovky. S tím vším vám dokážu poradit.</p>
+        <p>A pak i dál cestou odpadů, legislativy, čističek, kořenovek. Je dobré s vodou i v době dostatku zacházet chytře a myslet na chvíle sucha. U nás už nyní studny vysychají v červenci a dopouští se až s podzimem. Bez dešťovky bychom za vodu platili majlant, vožení cisteren do studní je už realita. Tahle situace se bude možná zhoršovat a rozšiřovat i do nížin. A nebo nás budou trápit povodně.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Nemám studnu, co s tím?</li>
+            <li>Mám studnu, ale voda není pitná.</li>
+            <li>Vysvětlení rozboru vody, možnosti filtrace a úpravy.</li>
+            <li>Zachycování dešťovky — s dotací, nebo bez?</li>
+            <li>Vrtat, nebo kopat?</li>
+            <li>Jaké čerpadlo chci?</li>
+            <li>Jak se připravit na výpadky proudu?</li>
+            <li>Jak a kde vsakovat vodu?</li>
+            <li>Odpadní vody — čističky kořenové, nebo plastové?</li>
+            <li>Tříkomorový septik, nebo žumpa?</li>
+            <li>Kolik stojí kořenovka a kam ji dát?</li>
+            <li>Jak se mám vyznat v rozboru vody?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="historie">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/historie-domu-480.avif 480w, /assets/img/historie-domu-960.avif 960w, /assets/img/historie-domu-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/historie-domu-960.jpg" srcset="/assets/img/historie-domu-480.jpg 480w, /assets/img/historie-domu-960.jpg 960w, /assets/img/historie-domu-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Stavební plán domu — historická archivní dokumentace." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">4</p>
+        <h3>Historie domu</h3>
+        <p class="craft__lead">Kdy postavili můj dům? V archivech na vás čeká spousta důležitých materiálů. Většina je přístupná online.</p>
+        <p class="craft__tag">Můžeme spolu zapátrat v archivech a historických dokumentech.</p>
+        <p>A nejde jen o zajímavosti. Podle starých katastrálních map zjistíte třeba, že vaše chalupa je mokrá, protože to byla dřív maštal. Nebo že jste měli původně za domem rybník a po jeho zrušení za bolševika nemáte vodu ve studni. Naučím vás vyhledávat a číst historické listiny a mapy. V archivech stavebních a katastrálních úřadů jsou dostupné staré smlouvy a projekty, a to často až do 18. století. Třeba takové výměnkářské smlouvy jsou opravdu počtení.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Kdo a kdy postavil můj dům?</li>
+            <li>Kde najdu staré mapy, kupní smlouvy a fotografie k domu?</li>
+            <li>Jak hledat v archivech a matrikách?</li>
+            <li>Jak mi pomůže AI?</li>
+            <li>Jak si začít budovat rodokmen?</li>
+            <li>Jak číst ve starých leteckých snímcích a kde je najdu?</li>
+            <li>Na co ještě stačím a kdy přizvat genealoga?</li>
+            <li>Jaké knihy k historii stavitelství, chalupám a krajině bych měl znát?</li>
+            <li>Co ze starých krámů na půdě má hodnotu a co už vyhodit?</li>
+            <li>Jak prodat se ziskem starou veteš, nebo jak ji využít?</li>
+            <li>Seznam doporučené literatury a internetových zdrojů.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="les">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/les-a-krajina-480.avif 480w, /assets/img/les-a-krajina-960.avif 960w, /assets/img/les-a-krajina-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/les-a-krajina-960.jpg" srcset="/assets/img/les-a-krajina-480.jpg 480w, /assets/img/les-a-krajina-960.jpg 960w, /assets/img/les-a-krajina-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Les v pozdní zimě, padlé stromy bez listí." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">5</p>
+        <h3>Les a krajina</h3>
+        <p class="craft__lead">Mám les. Co mám dělat? Lesy, krajina kolem, cesty, louky, rybníky.</p>
+        <p class="craft__tag">Péče o krajinu přináší potěšení! Objevíme možnosti vašeho nejbližšího okolí.</p>
+        <p>To všechno je na vašem místě hrozně důležité. Málokdo vydrží celé dny jen v chalupě nebo maringotce. Co dělat s lesem? Co je porostní mapa a co mi udělá hajný, když nezalesním? Je spousta udržitelných možností, jak s ním naložit. Od výběrové těžby, když třeba potřebujete vyrobit stůl, přes pronájem až po ponechání úplně přírodě. I v okolní krajině se můžete zábavně realizovat, když zrovna nemáte zahradu. Roubovat na nálety u cest ovocné odrůdy, obnovovat boží muka… A krajinu pak člověk vnímá mnohem víc za vlastní, když ji spoluutváří.</p>
+        <p>Projdu se s vámi kolem, řekneme si, kde co roste a proč, a jak hospodaří okolní zemědělci a proč. A proč jsou myslivci a proč obec nechce obnovit starou cestu. Ale třeba ji obnovíte vy.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Máme les. Co s ním?</li>
+            <li>Sázet, sít, nebo nechat obnovit?</li>
+            <li>Jak na mě dopadá lesní zákon?</li>
+            <li>Jak zjistím, že mám v lese biokoridor nebo biocentrum? A co to pro mě znamená?</li>
+            <li>Jak na okus zvěří?</li>
+            <li>Ovocné výsadby v krajině.</li>
+            <li>Práce s vodou — potoky, mokřady, tůně.</li>
+            <li>Jak obnovit starou cestu?</li>
+            <li>Jak hospodaří zemědělské družstvo za mými humny?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="seceni">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/seceni-480.avif 480w, /assets/img/seceni-960.avif 960w, /assets/img/seceni-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/seceni-960.jpg" srcset="/assets/img/seceni-480.jpg 480w, /assets/img/seceni-960.jpg 960w, /assets/img/seceni-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Klepání kosy — kosa opřená o klín, kladívko v ruce." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">6</p>
+        <h3>Sečení a péče o trávu</h3>
+        <p class="craft__lead">Jak to udělat, abyste netrávili všechen čas sečením trávy? Na světě je spousta lepších věcí než víkendy se sekačkou.</p>
+        <p>Sečení trávy má v naší kultuře spoustu tradic. Asi ta nejhlouběji zakořeněná souvisí s pravěkým pocitem štěstí z přehledného pozemku, kde vás nic nesežere a nepřítele uvidíte včas. Lidi uspokojuje likvidace divočiny, děláme to tisíce let. A vysoká tráva plná hmyzu je divočina. Stejně tak lidi těší pohled na hladinu čisté vody — jistota zdroje. Dnes tuto touhu naplňují bazény.</p>
+        <p>Nehaním vášnivě sekačky, ale zároveň vím, že dosáhnu stejných výsledků s kosou, potichu a zdravým pohybem. A přeživší zvířena se vám na zahradě odvděčí pomocí s likvidací mšic, slimáků a jiné havěti, kterou zrovna teď nemáme rádi.</p>
+        <p class="craft__tag">Naučím vás síct kosou opravdu dobře. Ale můžu vás naučit i čistit karburátor vašeho Vari.</p>
+        <p>A hlavně vytipujeme místa, kde trávník (to je od slova trávit, a to myšleno zvířaty) není potřeba. Tato místa můžete krásně nahradit ovocnými výsadbami, květinami nebo naprostou divočinou. A nebudete mít ten stres v pátek, že to musíte do večera posíct, a v neděli ten pocit, že jste vlastně jen řešili celý víkend trávu.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Co se zatravněnými povrchy?</li>
+            <li>Jakou sekačku na co koupit a kde?</li>
+            <li>Proč síct kosou a jak?</li>
+            <li>Rychlokurz sečení kosou a péče o nářadí.</li>
+            <li>Proč mi kosa po dědovi neseče?</li>
+            <li>Křovinořez, lišta, nebo bubnová sekačka?</li>
+            <li>Jak sušit seno?</li>
+            <li>Kolik trávy potřebuju pro krávu?</li>
+            <li>Má smysl si pořídit ovce?</li>
+            <li>Jakou travní směs zvolit?</li>
+            <li>Jaký typ managementu je nejlepší pro přírodu a pro mě?</li>
+            <li>Proč není čistě travní kompost ideální?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="zahrada">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/zahrada-480.avif 480w, /assets/img/zahrada-960.avif 960w, /assets/img/zahrada-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/zahrada-960.jpg" srcset="/assets/img/zahrada-480.jpg 480w, /assets/img/zahrada-960.jpg 960w, /assets/img/zahrada-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Zahrada s malým bílým skleníkem a ovocnými stromy." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">7</p>
+        <h3>Zahrada a výsadby</h3>
+        <p class="craft__lead">Kam to mám zasadit? Nikdo nechceme žít na poušti. Zahrada, stromy, keře, záhony — to nám dělá radost.</p>
+        <p class="craft__tag">Chcete záhony, ovocné stromy, skleník, slepice, ale nevíte, kam to všechno dát?</p>
+        <p>Říká se tomu design zahrady. Projdeme váš pozemek, vymyslíme, kde a co nejlíp založit, kam sázet větší stromy a kam zákrsky. Ploty z jedlých keřů vás odcloní a ještě se najíte. Ctím s rozumem zásady permakultury — hlavně se nenadřít, nechat prostor přírodě a vhodně doplnit divočinu. Nemá smysl stavět hmyzí domečky, když necháte v zahradě suchý strom. Samotná technika výsadeb je v dnešní době čím dál důležitější — vyvarujte se chyb a nebudete muset sázet stromy každý rok znovu. Nejvíc náročný na údržbu je trávník, nejméně les.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Kde si máme udělat záhony?</li>
+            <li>Kdy a jak sázet ovocné stromy a keře?</li>
+            <li>Kde a kdy koupit kvalitní výsadbový materiál?</li>
+            <li>Mám stromy zalévat?</li>
+            <li>Co se starým sadem?</li>
+            <li>Zvládnu řez stromů sám?</li>
+            <li>Jaké nářadí na to budu potřebovat?</li>
+            <li>Chci kurz řezu ovocných stromů. Jaký vybrat?</li>
+            <li>Proč mám a proč nemám chtít mít doma staré odrůdy?</li>
+            <li>Jak si naroubuju hrušeň po babičce?</li>
+            <li>Jak si vypěstuju podnože pro roubování?</li>
+            <li>Proč roubovat, kde vzít rouby a na co si dát pozor?</li>
+            <li>Jak na kompost?</li>
+            <li>Co je to ta permakultura — ezo, nebo usnadnění života?</li>
+            <li>Co postřiky?</li>
+            <li>Jak uskladnit ovoce?</li>
+            <li>Jak funguje trvalkový záhon?</li>
+            <li>Máme si pořídit zvířata?</li>
+            <li>Co zatravnit, zalesnit, odlesnit a osázet květinami?</li>
+            <li>Kam dát kompost?</li>
+            <li>Jak široké cestičky mezi záhony?</li>
+            <li>Jaký spon stromů?</li>
+            <li>Kde a čím udělat stín?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="truhlarstvi">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/truhlarstvi-480.avif 480w, /assets/img/truhlarstvi-960.avif 960w, /assets/img/truhlarstvi-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/truhlarstvi-960.jpg" srcset="/assets/img/truhlarstvi-480.jpg 480w, /assets/img/truhlarstvi-960.jpg 960w, /assets/img/truhlarstvi-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Řezání dřeva elektrickou pilou na ponku." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">8</p>
+        <h3>Truhlářství</h3>
+        <p class="craft__lead">S truhláři je to často na dlouho — ti skvělí nemají čas a vy na ně možná peníze.</p>
+        <p class="craft__tag">Truhlařte sami, to se dá naučit, provedu vás. Zkuste to sami!</p>
+        <p>Projdeme si vaše možnosti a nářadí a uvidíte, že toho hodně zvládnete sami a budete mít velkou radost.</p>
+        <p>Líbí se vám něco na pinťáku, ale vyrábí to někdo v Americe a je to hrozně drahé? Vymyslíme, jak to udělat doma z dostupných zdrojů! Vysvětlíme si cestu dřeva z lesa na pilu a pak do dílny. Jak poznat dobré řezivo už v lese, kdy a jak kácet stromy. Jak předejít dřevokazným houbám a hmyzu, nebo jak je pak doma likvidovat. Jak hoblovat strojně nebo ručně, magii japonského nářadí, ostření nástrojů. Tím vším vás rád provedu.</p>
+        <p>Kvalitní lidská práce je drahá, ale položit podlahu zvládnete sami. A hlavně člověk drobné nedostatky u vlastních realizací celkem toleruje. Pokud něco zkoní truhlář, tak mu to neodpustíte.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Jak poznat kvalitní řezivo?</li>
+            <li>Kde ho seženu a za kolik?</li>
+            <li>Jaké nářadí pro domácí truhlárnu, aby to nestálo milion?</li>
+            <li>Co všechno si ještě můžu vyrobit sám a co svěřit truhláři?</li>
+            <li>Jak zadat výrobu oken a dveří?</li>
+            <li>Koupit nové dveře, repasovat, nebo shánět na bazaru?</li>
+            <li>Proč a kdy truhlařit postaru ručně?</li>
+            <li>Kdy už koupit hoblovku?</li>
+            <li>Je můj krov v pořádku?</li>
+            <li>Můžu si ten trám vyměnit sám?</li>
+            <li>Co to roubení chalupy?</li>
+            <li>Jak sušit prkna a fošny?</li>
+            <li>Jak si vyrobím stůl na celý život?</li>
+            <li>Jsou tato prkna ještě k něčemu, nebo jen do kamen?</li>
+            <li>Repase podlahy opravdu svépomocí?</li>
+            <li>Jak si naostřím dláto, hoblík a jak na japonskou pilu?</li>
+            <li>Proč a jak si vyrábět vlastní násady na nářadí?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="topeni">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/topeni-480.avif 480w, /assets/img/topeni-960.avif 960w, /assets/img/topeni-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/topeni-960.jpg" srcset="/assets/img/topeni-480.jpg 480w, /assets/img/topeni-960.jpg 960w, /assets/img/topeni-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Renovace cihlového krbu a kuchyně v rekonstrukci." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">9</p>
+        <h3>Topení a kamna</h3>
+        <p class="craft__lead">Chci kachlový sporák, jako měla babička. Teplo v domě. Sálající kamna a čaj po zimní procházce jsou asi sen každého.</p>
+        <p>Pokud máte možnost topit dřevem, je to skvělá zpráva! Ze všech hledisek, ať ekologických, nebo finančních, je to za mě nejlepší varianta. Ano, dnes máme tepelná čerpadla, soláry, baterky, plyn. Ale vše to tak trochu běží na elektřinu a jste v područí technologicko-energetických firem. U kachlového sporáku nebo petric v maringotce se prostě ohřejete i pytlem šišek ze státního lesa, ať se děje co chce.</p>
+        <p class="craft__tag">Pomůžu vám v rozhodování, čím a kde topit, kde dříví vzít, pokud nemáte les, a jak nejlíp palivové dříví připravit, sušit, rovnat.</p>
+        <p>Zní to jako banalita, ale je to něco, co při trvalém bydlení řešíte pak celou zimu a desítky let. Když pak budete čtyřicet let chodit s košem dříví do kopce, někde to bude znát. Je třeba myslet i na stáří a nevymyslet si třeba kotel na 50cm polena, která v sedmdesáti neunesete.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Čím topit v mém domě?</li>
+            <li>Krbová, kachlová kamna s pecí, nebo elektrokotel?</li>
+            <li>Kamna s výměníkem, nebo bez?</li>
+            <li>Podlahové topení všude?</li>
+            <li>Vytápěný sprchový kout?</li>
+            <li>Kolik dříví potřebuju na zimu?</li>
+            <li>Kde sehnat za rozumné peníze dříví?</li>
+            <li>Štípačka, sekera, nebo klíny?</li>
+            <li>Jak se nenadřít u přípravy palivového dříví?</li>
+            <li>Jak dlouho a jak sušit?</li>
+            <li>Cirkulárka, aku, nebo motorovka?</li>
+            <li>Jak na údržbu a ostření pil a bezpečnou práci?</li>
+            <li>Proč si nasadit sekeru sám a jak vyrobit topůrko?</li>
+            <li>Stavba chlebové pece svépomocí, nebo s kamnářem?</li>
+            <li>Raketová kamna, nebo petrky?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="technologie">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/primerene-technologie-480.avif 480w, /assets/img/primerene-technologie-960.avif 960w, /assets/img/primerene-technologie-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/primerene-technologie-960.jpg" srcset="/assets/img/primerene-technologie-480.jpg 480w, /assets/img/primerene-technologie-960.jpg 960w, /assets/img/primerene-technologie-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Instalace podlahového topení s rozloženými červenými trubkami." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">10</p>
+        <h3>Přiměřené technologie</h3>
+        <p class="craft__lead">Myslím, že čím víc technologií v domě, tím je nakonec víc starostí. Nicméně s rozvahou se dá spousta moderních věcí využít.</p>
+        <p class="craft__tag">Technologie musí sloužit nám, ne my jim. Moderní vychytávky s rozvahou a úsporně.</p>
+        <p>Přiznám se, že jsem trochu staromilec. Úplně mi stačí, když mi bouřka odpálí ledkovou žárovku a čerpadlo. Nicméně třeba solární ohřev vody nebo vodní elektrárna jsou super. Říká se tomu přiměřené technologie. Pokud jste nadšenci do věcí na wifi a nevadí vám, že v kamnech s výměníkem si bez elektřiny nezatopíte, můžeme projít, co má smysl a co už ne. Kladu důraz na lehkou připravenost na chvíle bez proudu (ale betonový kryt na dvoře taky nemám). Zároveň chovám odpor k elektronice z Číny v domech — dřevo a pumpa na vodu je zkrátka jistota.</p>
+        <p>Dlouhou dobu jsem se živil jako osvětlovač. Velice rád vám poradím s light designem v interiéru a výběrem žárovek tak, aby se vám dobře žilo a spalo.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Jaké moderní technologie v domě jsou užitečné?</li>
+            <li>Solární panely, nebo solární lednice?</li>
+            <li>Jak se nezbláznit ze starostí o digitální tamagoči v domě?</li>
+            <li>Jak na osvětlení interiéru, aby se nám dobře žilo?</li>
+            <li>Kde sehnat nebo jak vyrobit vhodná svítidla?</li>
+            <li>Základy elektrikařiny — co si zapojím sám?</li>
+            <li>Jaké nářadí na roztahání kabelů v domě?</li>
+            <li>Tajemství rozvaděče už nechám odborníkům?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+    <article class="craft" id="zivot-na-venkove">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/zivot-na-venkove-480.avif 480w, /assets/img/zivot-na-venkove-960.avif 960w, /assets/img/zivot-na-venkove-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/zivot-na-venkove-960.jpg" srcset="/assets/img/zivot-na-venkove-480.jpg 480w, /assets/img/zivot-na-venkove-960.jpg 960w, /assets/img/zivot-na-venkove-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Polární záře osvětlující noční oblohu nad stromy a chalupou." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">11</p>
+        <h3>Život na venkově</h3>
+        <p class="craft__lead">Jak se z toho všeho nezbláznit? Život mimo město, ať už v chalupě, nebo v maringotce, má i svoje úskalí.</p>
+        <p class="craft__tag">Ukážu vám cestu ke spokojenému životu na venkově s dětmi nebo o samotě. Rádce pro lidi, kteří začínají něco nového, lepšího.</p>
+        <p>Na venkov jsem se z města stěhoval dvakrát, podruhé s rodinou. Můžeme si povídat o tom, jak naplnit potřeby všech členů domácnosti v novém prostředí, o domácím vzdělávání dětí, jak navázat dobré vztahy s okolím. Jak jednat s řemeslníky, aby vás všichni hned nenatáhli. Jak jednat s předsedou družstva o pronájmu pozemků, s myslivci o přemnožené zvěři. Nejhorší asi je přijít na nové místo a hned všechny poslat do háje, protože člověk má často pocit, že ví všechno líp než vesnický lid.</p>
+        <p>Povím vám, jak získávat radost a dopaminy jinak než z Instagramu a koukáním na videa, jak někdo něco dělá.</p>
+        <p>Nebo máte pocit, že s dětmi nic neuděláte? Že tu chalupu nikdy takhle nedáte do kupy? Můžu s vámi sdílet vlastní zkušenosti ze zapojení dětí, poradím, co s nimi postavit na dvorku za atrakce a z čeho a jak s dětmi mít dobrý a upřímný vztah. I díky tomu pak můžeme s větší nadějí doufat, že až nám přestanou ruce sloužit, děti přijedou na pomoc, nebo se dokonce budou chtít vrátit tam, kde vyrostly. Ale to jen pokud jim ten opravdický život v dětství neznechutíme.</p>
+      </div>
+    </article>
+
+    <article class="craft" id="svarovani">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/svarovani-480.avif 480w, /assets/img/svarovani-960.avif 960w, /assets/img/svarovani-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/svarovani-960.jpg" srcset="/assets/img/svarovani-480.jpg 480w, /assets/img/svarovani-960.jpg 960w, /assets/img/svarovani-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Kurz svařování železa." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <p class="craft__num">12</p>
+        <h3>Svařování a opravy</h3>
+        <p class="craft__lead">Je to spousta dopaminů, když se vám podaří něco svařit nebo opravit.</p>
+        <p>Rád vás naučím základy svařování železa. Netvrdím, že umím vyfrknout housenky jako starý svářeč, ale tak, abyste si opravili hrábě nebo kolečko, vás to naučím. Je to o cviku, dostat to do ruky. Pak si můžete svařit skleník, který by jinak přišel na šedesát tisíc, nemusíte běhat pořád za sousedem, který stejně nemá čas. A řekneme si, co je lepší nechat na odbornících.</p>
+        <p>Umět si opravit motorový stroj je taky paráda — vysvětlím, jak funguje karburátor, proč nekupovat benzín s biosložkou a jak seřídit volnoběh.</p>
+        <details class="craft__faq">
+          <summary>Otázky, které spolu probereme</summary>
+          <ul>
+            <li>Chci se naučit svařovat železo, jak na to?</li>
+            <li>Jaké nářadí budu potřebovat?</li>
+            <li>Kdy budu umět svářet jako profík?</li>
+            <li>Jak vybavit dílnu pro práci s kovy?</li>
+            <li>Co mám dát kováři, co zámečníkovi a co klempíři?</li>
+            <li>Kde seženu staré kování?</li>
+            <li>Opravy a údržba motorů.</li>
+            <li>Jak funguje a co potřebuje karburátor?</li>
+          </ul>
+        </details>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="container narrow how" id="jak-to-chodi">
+    <h2>Jak to chodí?</h2>
+    <figure class="how__media">
+      <img src="/assets/img/navsteva-960.jpg" srcset="/assets/img/navsteva-480.jpg 480w, /assets/img/navsteva-960.jpg 960w, /assets/img/navsteva-1600.jpg 1600w" sizes="(min-width: 900px) 38rem, 100vw" alt="Stavební poradce s notesem na prohlídce domu." width="1600" height="1067" decoding="async">
+    </figure>
+    <p>Pracuji většinou formou celodenních návštěv. Buď si vyberete obory, které vás zajímají, a nebo projdeme vaši nemovitost do detailu a probereme sklepy, půdy, vlhké zdivo, záhony, cesty, výsadbu stromů, oplocení, omítky, sečení kosou… Rád na místě zůstanu co nejdéle, celý den. Můžeme spolu nasadit pořádně sekeru po dědovi, vyrobit kosiště, nabrousit nářadí, zasadit stromy (na podzim).</p>
+    <p>Teprve při delším pozorování a nacítění se dá najít dobré řešení. Nemám rád předražené technologie a zbytečné uspěchané investice. Pokud nemáte peníze na materiál, ale máte čas, vymyslíme levné řešení. Já mám například 20m² strop v dílně ze školních tabulí z místní základky. OSB desky by vyšly na pět tisíc a rozhodně by na nich nebyla notová osnova z roku 2005. Téměř vše jde i bez peněz, jen to chce vymyslet. I ovocné stromky si vyrobíte, semenáče rostou pravděpodobně kolem a už jen naroubujete oblíbenou odrůdu.</p>
+    <p>Zakládám si na co nejmenších výdajích, ekologii a neplýtvání energií vlastní i planety. Kladu důraz na krásu a estetické hodnoty — myslím, že hezké prostředí kultivuje obyvatele domu. Mám rád práci architektů a spolupracuji s řadou z nich. Spíš ale formou dotazů na konkrétní detaily než investicí do celých projektů.</p>
+    <p>Pokud ty peníze máte, může to být výhoda. Ale už jsem viděl i zbytečně přeinvestované domy, ze kterých tečou miliony, ale nikdo si je neužije.</p>
+    <p>Chalupu můžete budovat i bez peněz! Jen se tam tedy musíte mít jak dostat, ale stavět se v extrémním případě dá i z pneumatik a hlíny, aniž by to bylo vidět. Nemusíte například kupovat drahou dlažbu na zápraží, lze použít místní kámen. A to je i esteticky a kulturně v pořádku.</p>
+    <p><strong>Co nedělám?</strong> Nejsem stavební ani zahradnická firma. Není v mých časových možnostech udělat vám celou chalupu nebo vysadit sad. Rád vás to všechno naučím na kousku a vy si pak poradíte už sami, nebo budete aspoň vědět, jak to někomu zadat.</p>
+  </section>
+
+  <section class="container pricing" id="cenik">
+    <h2>Kolik to teda stojí?</h2>
+
+    <!-- TODO platby: nahradit STRIPE_LINK_* za reálné Stripe Payment Link URL.
+         Ondřej v Stripe Dashboard → Products vytvoří 3 produkty (Naťuknout 500 Kč,
+         Grunt 7000 Kč, Grunt i glajcha 13000 Kč) → u každého vygeneruje Payment Link
+         → odkaz nahradit níže. Apple Pay / Google Pay / karty jsou v Stripe defaultně. -->
+
+    <div class="pricing__grid">
+
+      <article class="price-card">
+        <figure class="price-card__media">
+          <picture class="price-card__media-bg">
+            <source type="image/avif" srcset="/assets/img/cenik-natuknout-1-480.avif 480w, /assets/img/cenik-natuknout-1-720.avif 720w" sizes="(min-width: 900px) 22rem, 90vw">
+            <img src="/assets/img/cenik-natuknout-1-480.jpg" srcset="/assets/img/cenik-natuknout-1-480.jpg 480w, /assets/img/cenik-natuknout-1-720.jpg 720w" sizes="(min-width: 900px) 22rem, 90vw" alt="Odlupující se barva na staré zdi." width="720" height="900" loading="lazy" decoding="async">
+          </picture>
+          <picture class="price-card__media-overlay">
+            <source type="image/avif" srcset="/assets/img/cenik-natuknout-2-480.avif 480w, /assets/img/cenik-natuknout-2-720.avif 720w" sizes="(min-width: 900px) 9rem, 35vw">
+            <img src="/assets/img/cenik-natuknout-2-480.jpg" srcset="/assets/img/cenik-natuknout-2-480.jpg 480w, /assets/img/cenik-natuknout-2-720.jpg 720w" sizes="(min-width: 900px) 9rem, 35vw" alt="Kurz sečení kosou." width="720" height="720" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <h3 class="price-card__name">Jen to naťuknout</h3>
+        <p class="price-card__price"><strong>500 Kč</strong></p>
+        <p>Do začátku nabízím hodinu intenzivní vzdálené komunikace. Můžete mi třeba poslat pár fotek a pak si zavoláme. Probereme důkladně, co vás trápí nebo co sháníte. Případně vám můžu udělat třeba základní historickou rešerši k domu, můžeme se pobavit o možnostech vytápění domu.</p>
+        <p>Platí ovšem, že vám můžu věnovat jen hodinu nebo lehce přes. Pokud se to nedá vyřešit do hodiny po telefonu, určitě za vámi radši přijedu.</p>
+        <div class="price-card__cta">
+          <a class="btn btn--primary" href="STRIPE_LINK_NATUKNOUT" target="_blank" rel="noopener" data-buy="natuknout">Zaplatit kartou — 500 Kč</a>
+          <a class="btn btn--ghost" href="#kontakt">Domluvit jinak</a>
+        </div>
+      </article>
+
+      <article class="price-card price-card--featured">
+        <figure class="price-card__media">
+          <picture class="price-card__media-bg">
+            <source type="image/avif" srcset="/assets/img/cenik-grunt-1-480.avif 480w, /assets/img/cenik-grunt-1-720.avif 720w" sizes="(min-width: 900px) 22rem, 90vw">
+            <img src="/assets/img/cenik-grunt-1-480.jpg" srcset="/assets/img/cenik-grunt-1-480.jpg 480w, /assets/img/cenik-grunt-1-720.jpg 720w" sizes="(min-width: 900px) 22rem, 90vw" alt="Repase staré dřevěné podlahy." width="720" height="900" loading="lazy" decoding="async">
+          </picture>
+          <picture class="price-card__media-overlay">
+            <source type="image/avif" srcset="/assets/img/cenik-grunt-2-480.avif 480w, /assets/img/cenik-grunt-2-720.avif 720w" sizes="(min-width: 900px) 9rem, 35vw">
+            <img src="/assets/img/cenik-grunt-2-480.jpg" srcset="/assets/img/cenik-grunt-2-480.jpg 480w, /assets/img/cenik-grunt-2-720.jpg 720w" sizes="(min-width: 900px) 9rem, 35vw" alt="Práce na stavbě v terénu." width="720" height="720" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <h3 class="price-card__name">Setkání Grunt</h3>
+        <p class="price-card__price"><strong>7 000 Kč</strong></p>
+        <p>Přijedu za vámi a projdeme, co vás zajímá. Můžu s vámi být celý den na pozemku, sázet správně stromy, klepat kosu, ukázat, jak šetrně vyndat prkennou podlahu a repasovat prkna. Můžeme u počítače projít dostupné historické dokumenty k chalupě a vašim předkům. Je jen na vás, jak můj čas využijete. Samozřejmě většinou zabředneme i do věcí, které v plánu nebyly. Často si lidé dělají poznámky nebo audiozáznam. Informací padne opravdu hodně.</p>
+        <p>Program Grunt je zároveň možné využít jako odbornou návštěvu před koupí nemovitosti. Pokud můžete za den jet na víc prohlídek, pojedu s vámi.</p>
+        <p>V ceně je další hodina telekomunikace.</p>
+        <p>Pokud budete chtít, dovezu vám váš první jasanový špalek na štípání dřeva — velikost domluvíme podle vaší sekery a polen.</p>
+        <div class="price-card__cta">
+          <a class="btn btn--primary" href="STRIPE_LINK_GRUNT" target="_blank" rel="noopener" data-buy="grunt">Zaplatit kartou — 7 000 Kč</a>
+          <a class="btn btn--ghost" href="#kontakt">Domluvit jinak</a>
+        </div>
+      </article>
+
+      <article class="price-card">
+        <figure class="price-card__media">
+          <picture class="price-card__media-bg">
+            <source type="image/avif" srcset="/assets/img/cenik-glajcha-1-480.avif 480w, /assets/img/cenik-glajcha-1-720.avif 720w" sizes="(min-width: 900px) 22rem, 90vw">
+            <img src="/assets/img/cenik-glajcha-1-480.jpg" srcset="/assets/img/cenik-glajcha-1-480.jpg 480w, /assets/img/cenik-glajcha-1-720.jpg 720w" sizes="(min-width: 900px) 22rem, 90vw" alt="Krajina na Ratibořci." width="720" height="900" loading="lazy" decoding="async">
+          </picture>
+          <picture class="price-card__media-overlay">
+            <source type="image/avif" srcset="/assets/img/cenik-glajcha-2-480.avif 480w, /assets/img/cenik-glajcha-2-720.avif 720w" sizes="(min-width: 900px) 9rem, 35vw">
+            <img src="/assets/img/cenik-glajcha-2-480.jpg" srcset="/assets/img/cenik-glajcha-2-480.jpg 480w, /assets/img/cenik-glajcha-2-720.jpg 720w" sizes="(min-width: 900px) 9rem, 35vw" alt="Detail stavebních prací." width="720" height="720" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <h3 class="price-card__name">Grunt i glajcha</h3>
+        <p class="price-card__price"><strong>13 000 Kč</strong></p>
+        <p>Grunt znáte. Glajcha je nejvyšší místo stavby domu, nebo také slavnost, která se při jeho dosažení pořádá.</p>
+        <p>Součástí je vše jako v programu Grunt a navíc počítám s tím, že spolu naplánujeme větší akci u vás. Například lití betonových podlah, montáž dřevěných oken nebo větší výsadbu dřevin. Pak po domluvě dorazím podruhé ve smluvený den, když se budete do věci pouštět, a minimálně půl dne vám budu k ruce a duši. V ceně jsou dvě hodiny telekomunikace.</p>
+        <p>Nebo u vás můžu zůstat dva dny, obzvlášť při večerním posezení u ohně se dá zabřednout do podrobností. Buřty si vezmu, přespím kdekoliv.</p>
+        <p>Ano, rád vám dovezu jasanový štípací špalek nebo magnetické hrábě (kouzelně najdou ztracený šroubek v trávě nebo vytahají hřebíky ze záhonu). Zároveň dostanete samizdatovou verzi básnické sbírky <em>Tohle musíš udělat co nejdřív</em> (autorská poezie s tématem chalup, stavby a vesnice).</p>
+        <div class="price-card__cta">
+          <a class="btn btn--primary" href="STRIPE_LINK_GLAJCHA" target="_blank" rel="noopener" data-buy="glajcha">Zaplatit kartou — 13 000 Kč</a>
+          <a class="btn btn--ghost" href="#kontakt">Domluvit jinak</a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="pricing__note">Po platbě se Ondřej ozve do 24 hodin s termínem. Platba je bezpečně zpracovaná přes Stripe — Apple Pay, Google Pay i běžné karty.</p>
+  </section>
+
+  <section class="container narrow contact" id="kontakt">
+    <h2>Tak se potkáme.</h2>
+    <figure class="contact__media">
+      <img src="/assets/img/ondrej-960.jpg" srcset="/assets/img/ondrej-480.jpg 480w, /assets/img/ondrej-960.jpg 960w, /assets/img/ondrej-1600.jpg 1600w" sizes="(min-width: 900px) 38rem, 100vw" alt="Ondřej Pelikán." width="1600" height="1067" decoding="async">
+    </figure>
+    <p>Volejte mi na <a href="tel:+420776700801"><strong>776 700 801</strong></a>, jen do 19h prosím.</p>
+    <p>Pište mi na <a href="mailto:ondrej@trinactremesel.cz"><strong>ondrej@trinactremesel.cz</strong></a></p>
+    <p>Číslo účtu <strong>670100-2208678311/6210</strong></p>
+    <p>Doprava za vámi je do 50 km ode mě (Chyšky) zdarma, pak za 10 Kč/km.</p>
+    <p>Platit můžete na místě hotově nebo QR kódem pro daný program. Fakturu pošlu.</p>
+    <p>Jestli máte pocit, že si zasloužíte slevu, pojďme se o tom pobavit! (Třeba pokud jste na rodičovské.)</p>
+  </section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <a href="/" aria-label="Třináct řemesel — domů">
+          <img src="/assets/img/logo.png" width="576" height="144" alt="Třináct řemesel" class="site-footer__logo">
+        </a>
+        <p>Ondřej Pelikán<br>Chyšky 1, 399 01 Chyšky – Ratibořec</p>
+      </div>
+      <div>
+        <p><a href="tel:+420776700801">776 700 801</a> <small>(do 19h prosím)</small></p>
+        <p><a href="mailto:ondrej@trinactremesel.cz">ondrej@trinactremesel.cz</a></p>
+        <p>IBAN: 670100-2208678311/6210</p>
+        <p>IČO: 87057239</p>
+      </div>
+    </div>
+    <p class="site-footer__copy">© <span data-year>2026</span> Ondřej Pelikán · <a href="/obchodni-podminky/">Obchodní podmínky</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

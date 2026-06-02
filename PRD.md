@@ -1,6 +1,6 @@
 # PRD — trinactremesel.cz (statický web)
 
-**Verze:** 0.2
+**Verze:** 0.3
 **Autor projektu:** Ondřej Pelikán
 **Datum:** 2026-06-01
 
@@ -10,11 +10,11 @@
 |---|---|---|
 | 1 | Typografie | **Cesta A** — Poppins na všechno (kontinuita) |
 | 2 | Barvy | **Achromatická paleta** — bílá / šedé / černá, jako současný web |
-| 3 | Platby | **ComGate / GoPay** + malý backend na Cloudflare Workers |
+| 3 | Platby | **Stripe Payment Links** — zero backend, zero paušál; karty + Apple Pay + Google Pay. Důvod: low volume + high ticket → měsíční paušál ComGate/GoPay (~190 Kč) se nemá z čeho vrátit. Bez CZ bank-buttonů, ale tu funkci dořešíme v případě prokazatelné poptávky migrací na PayU. |
 | 4 | Fotky v1 | **Placeholdery** — Káťa kóduje proti šedým boxům, Ondřej dodá originály později |
 | 5 | GitHub repo | název `13remesel` (zatím lokálně, remote později) |
 
-Otevřené (nebrání startu): DPH status, Cloudflare účet, autor obchodních podmínek.
+Otevřené (nebrání startu): DPH status (ovlivňuje Stripe konfiguraci), Cloudflare účet (pro 301 redirect), autor obchodních podmínek.
 
 ---
 
@@ -343,7 +343,9 @@ Build je idempotentní, spouští se `npm run build` (kde `package.json` má jen
   - **Plusy:** zero poplatky, zero integrace, statické.
   - **Mínusy:** žádná automatika, žádný callback, žádné karetní platby. Není to „e-shop", je to „zaplaťte si sami".
 
-**Doporučení:** **A (Stripe Payment Links)** pro v1. Pokud po nějaké době Ondřej zjistí, že čeští klienti chtějí bank-button, přejde na B (s drobným backend doplňkem).
+**Doporučení:** **A (Stripe Payment Links)** pro v1. Pokud po nějaké době Ondřej zjistí, že čeští klienti chtějí bank-button, přejde na **PayU** (nemá měsíční paušál, má CZ bank-buttons; lepší než ComGate/GoPay pro tento volume — viz aktualizované srovnání 2026-06-01).
+
+**ROZHODNUTO (2026-06-01):** Cesta A. Vybráno Stripe Payment Links.
 
 **UI v ceníku:**
 - Pod každým ze tří balíčků dvě tlačítka:

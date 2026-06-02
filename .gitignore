@@ -3,3 +3,7 @@ node_modules/
 dist/
 .env
 *.log
+assets/img/_src/
+
+# Lokální server cíl (původně dist/, nyní docs/ pro GitHub Pages)
+# docs/ je commitnuté

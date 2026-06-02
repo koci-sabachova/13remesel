@@ -9,7 +9,7 @@ const ROOT = process.cwd();
 const PAGES = join(ROOT, '_pages');
 const PARTIALS = join(ROOT, '_partials');
 const ASSETS = join(ROOT, 'assets');
-const DIST = join(ROOT, 'dist');
+const DIST = join(ROOT, 'docs');
 const SITE_URL = 'https://trinactremesel.cz';
 
 if (existsSync(DIST)) rmSync(DIST, { recursive: true, force: true });
@@ -77,11 +77,11 @@ for (const file of pages) {
 if (existsSync(ASSETS)) {
   cpSync(ASSETS, join(DIST, 'assets'), {
     recursive: true,
-    filter: (src) => !src.endsWith('.DS_Store'),
+    filter: (src) => !src.endsWith('.DS_Store') && !src.includes('/img/_src'),
   });
 }
 
-for (const f of ['404.html', 'robots.txt', 'CNAME', 'google.html']) {
+for (const f of ['404.html', 'robots.txt', 'CNAME', 'google.html', 'favicon.ico']) {
   if (existsSync(join(ROOT, f))) copyFileSync(join(ROOT, f), join(DIST, f));
 }
 
