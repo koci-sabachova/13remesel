@@ -564,6 +564,20 @@ details ul {
   height: auto;
   display: block;
 }
+.about__pair {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+}
+.about__pair figure { margin: 0; }
+.about__pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (min-width: 700px) {
+  .about__pair { grid-template-columns: 1fr 1fr; }
+}
 @media (min-width: 700px) {
   .about__intro {
     grid-template-columns: 1fr 1fr;
