@@ -99,7 +99,7 @@ if (existsSync(ASSETS)) {
   });
 }
 
-for (const f of ['404.html', 'robots.txt', 'CNAME', 'google.html', 'favicon.ico']) {
+for (const f of ['404.html', 'robots.txt', 'llms.txt', 'CNAME', 'google.html', 'favicon.ico']) {
   if (existsSync(join(ROOT, f))) copyFileSync(join(ROOT, f), join(DIST, f));
 }
 
