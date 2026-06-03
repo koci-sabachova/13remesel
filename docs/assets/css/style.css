@@ -147,24 +147,32 @@ main > .hero:first-child {
   background: var(--color-surface);
   border-top: 1px solid var(--color-rule);
   padding-block: var(--space-10);
+  text-align: center;
 }
 .site-footer__grid {
   display: grid;
   gap: var(--space-6);
+  align-items: start;
 }
 @media (min-width: 768px) {
   .site-footer__grid { grid-template-columns: 1fr 1fr; }
 }
+.site-footer__brand {
+  display: inline-block;
+}
 .site-footer__logo {
-  height: 2rem;
+  height: 1.5rem;
   width: auto;
   display: block;
-  margin-bottom: var(--space-3);
+  margin: 0 0 var(--space-2);
 }
+.site-footer p { max-width: none; }
+.site-footer__grid { text-align: left; }
 .site-footer__copy {
   margin-top: var(--space-8);
   font-size: var(--fs-sm);
   color: var(--color-muted);
+  text-align: center;
 }
 
 /* === Narrow container variant === */
@@ -225,24 +233,26 @@ main > .hero:first-child {
 .hero--poem .hero__overlay {
   background: rgba(255, 255, 255, 0.25);
 }
-.hero--poem .hero__content,
-.hero--about .hero__content {
+.hero__content {
+  position: relative;
   text-align: center;
 }
-.hero__content { position: relative; }
 .hero__title {
   font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
 .hero__lead {
-  margin-top: var(--space-6);
-  font-size: var(--fs-lg);
+  margin: var(--space-4) auto 0;
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
   max-width: 38rem;
-  line-height: var(--lh-base);
+  line-height: 1.25;
+}
+@media (min-width: 768px) {
+  .hero__lead { max-width: none; }
 }
 .hero__kicker {
-  margin-top: var(--space-5);
+  margin: var(--space-5) auto 0;
   color: var(--color-muted);
   max-width: 38rem;
 }
@@ -251,6 +261,7 @@ main > .hero:first-child {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -399,7 +410,8 @@ details ul {
   gap: var(--space-6);
 }
 .pricing__note {
-  margin-top: var(--space-6);
+  margin: var(--space-6) auto 0;
+  max-width: 38rem;
   text-align: center;
   color: var(--color-muted);
   font-size: var(--fs-sm);
@@ -533,7 +545,6 @@ details ul {
 }
 .contact__text p {
   margin-top: var(--space-3);
-  font-size: var(--fs-lg);
 }
 .contact__text p:first-child { margin-top: 0; }
 .contact__media { margin: 0; }
@@ -541,6 +552,7 @@ details ul {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-lg);
 }
 @media (min-width: 700px) {
   .contact__grid {
@@ -552,6 +564,7 @@ details ul {
 
 /* === About / Můj příběh === */
 .about { max-width: 56rem; }
+.about p { max-width: none; }
 .about__intro {
   display: grid;
   gap: var(--space-5);
@@ -563,6 +576,7 @@ details ul {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-lg);
 }
 .about__pair {
   display: grid;
@@ -574,9 +588,19 @@ details ul {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-lg);
 }
 @media (min-width: 700px) {
   .about__pair { grid-template-columns: 1fr 1fr; }
+}
+.about__wide {
+  margin: var(--space-6) 0;
+}
+.about__wide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
 }
 @media (min-width: 700px) {
   .about__intro {
@@ -657,7 +681,7 @@ details ul {
 }
 .poem__title {
   font-size: var(--fs-h2);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-8);
   font-weight: 400;
   font-style: italic;
   color: var(--color-muted);
@@ -676,7 +700,7 @@ details ul {
 .poem__body .verse {
   margin: 0;
   margin-top: var(--space-5);
-  font-size: var(--fs-lg);
+  font-size: 1rem;
   line-height: 1.4;
   max-width: none;
 }
