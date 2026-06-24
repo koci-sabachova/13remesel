@@ -72,6 +72,15 @@ a:hover { text-decoration-thickness: 2px; }
   background: transparent;
   border-bottom: none;
 }
+.site-header.is-floating {
+  position: fixed;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-rule);
+  transition: transform 220ms ease;
+}
+.site-header.is-hidden {
+  transform: translateY(-100%);
+}
 main { padding-top: 4.5rem; }
 main > .hero:first-child {
   margin-top: -4.5rem;
@@ -164,10 +173,9 @@ main > .hero:first-child {
   height: 1.5rem;
   width: auto;
   display: block;
-  margin: 0 0 var(--space-2);
+  margin: 0 auto var(--space-2);
 }
 .site-footer p { max-width: none; }
-.site-footer__grid { text-align: left; }
 .site-footer__copy {
   margin-top: var(--space-8);
   font-size: var(--fs-sm);
@@ -185,6 +193,7 @@ main > .hero:first-child {
   display: inline-block;
   padding: var(--space-3) var(--space-5);
   border: 1px solid var(--color-ink);
+  border-radius: var(--radius-lg);
   text-decoration: none;
   font-weight: 700;
   font-size: var(--fs-md);
@@ -201,6 +210,25 @@ main > .hero:first-child {
   color: var(--color-ink);
 }
 .btn--ghost:hover { background: var(--color-ink); color: var(--color-bg); }
+.btn__price,
+.btn__label { display: block; }
+.btn__label {
+  margin-top: var(--space-1);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+.price-card .btn--primary {
+  background: #333333;
+  border-color: #333333;
+  color: #fff;
+}
+.price-card .btn--primary:hover {
+  background: transparent;
+  color: #333333;
+}
+.price-card--featured .btn--primary {
+  padding: var(--space-5) var(--space-6);
+}
 
 /* === Hero === */
 .hero {
@@ -295,6 +323,7 @@ main > .hero:first-child {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-lg);
 }
 .how__media,
 .contact__media,
@@ -307,6 +336,7 @@ main > .hero:first-child {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-lg);
 }
 .placeholder {
   aspect-ratio: 4 / 3;
@@ -326,22 +356,13 @@ main > .hero:first-child {
   color: var(--color-muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
-.craft__num {
-  font-size: var(--fs-sm);
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--color-muted);
-  margin-bottom: var(--space-2);
-}
-.craft__num::before { content: "#"; }
 .craft h3 {
   font-size: var(--fs-h3);
   line-height: var(--lh-tight);
   margin-bottom: var(--space-4);
 }
 .craft__lead {
-  font-size: var(--fs-lg);
-  font-style: italic;
+  font-size: var(--fs-md);
   color: var(--color-muted);
   margin-bottom: var(--space-4);
 }
@@ -350,11 +371,56 @@ main > .hero:first-child {
   font-size: var(--fs-md);
   margin-block: var(--space-5);
 }
-.craft__faq {
-  margin-top: var(--space-6);
-  border-top: 1px solid var(--color-rule);
-  padding-top: var(--space-4);
+/* "Paywall" look — content fades to bg, with "Číst dál" toggle */
+.craft__more {
+  margin-top: var(--space-3);
 }
+.craft__more-inner {
+  position: relative;
+}
+.craft__more-inner > p,
+.craft__more-inner > ul {
+  margin-top: var(--space-3);
+}
+.craft__more-inner > *:first-child {
+  margin-top: 0;
+}
+.craft__more-inner ul {
+  padding-left: var(--space-5);
+}
+.craft__more[data-collapsed="true"] .craft__more-inner {
+  max-height: 3.3em;
+  overflow: hidden;
+}
+.craft__more[data-collapsed="true"] .craft__more-inner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-bg) 90%);
+  pointer-events: none;
+}
+.price-card .craft__more[data-collapsed="true"] .craft__more-inner {
+  max-height: 9.5em;
+}
+.price-card .craft__more[data-collapsed="true"] .craft__more-inner::after {
+  height: 6em;
+}
+.craft__more-toggle {
+  all: unset;
+  display: block;
+  margin-top: 0;
+  cursor: pointer;
+  color: #8c8c8c;
+}
+.craft__more-toggle:hover {
+  font-weight: 700;
+}
+.craft__more-read::after { content: "…"; }
+.craft__more[data-collapsed="false"] .craft__more-read,
+.craft__more[data-collapsed="true"] .craft__more-close { display: none; }
 
 @media (min-width: 900px) {
   .craft {
@@ -411,7 +477,7 @@ details ul {
 }
 .pricing__note {
   margin: var(--space-6) auto 0;
-  max-width: 38rem;
+  max-width: none;
   text-align: center;
   color: var(--color-muted);
   font-size: var(--fs-sm);
@@ -419,6 +485,7 @@ details ul {
 .price-card {
   padding: var(--space-6);
   border: 1px solid var(--color-rule);
+  border-radius: var(--radius-lg);
   background: var(--color-surface);
   display: flex;
   flex-direction: column;
@@ -627,6 +694,7 @@ details ul {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius-lg);
 }
 .about__gallery {
   margin-top: var(--space-10);
@@ -641,12 +709,13 @@ details ul {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+  border-radius: var(--radius-lg);
 }
 @media (min-width: 700px) {
   .about__gallery { grid-template-columns: repeat(3, 1fr); }
 }
 
-.about { padding-block: var(--space-10) var(--space-16); }
+.about { padding-block: var(--space-6) var(--space-16); }
 .about__header { margin-bottom: var(--space-10); }
 .about__header h1 {
   letter-spacing: -0.02em;
@@ -693,7 +762,6 @@ details ul {
   font-size: var(--fs-h2);
   margin-bottom: var(--space-8);
   font-weight: 400;
-  font-style: italic;
   color: var(--color-muted);
   letter-spacing: 0.02em;
 }
@@ -709,12 +777,13 @@ details ul {
 }
 .poem__body .verse {
   margin: 0;
-  margin-top: var(--space-5);
   font-size: 1rem;
   line-height: 1.4;
   max-width: none;
 }
-.poem__body .verse:first-child { margin-top: 0; }
+.poem__body .verse--stanza {
+  margin-top: 1.4em;
+}
 .poem__sign {
   margin-top: var(--space-12);
   font-style: italic;
