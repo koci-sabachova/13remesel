@@ -156,31 +156,46 @@ main > .hero:first-child {
   background: var(--color-surface);
   border-top: 1px solid var(--color-rule);
   padding-block: var(--space-10);
-  text-align: center;
 }
-.site-footer__grid {
-  display: grid;
-  gap: var(--space-6);
-  align-items: start;
-}
-@media (min-width: 768px) {
-  .site-footer__grid { grid-template-columns: 1fr 1fr; }
+.site-footer__top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: flex-start;
 }
 .site-footer__brand {
   display: inline-block;
+  line-height: 0;
 }
 .site-footer__logo {
   height: 1.5rem;
   width: auto;
   display: block;
-  margin: 0 auto var(--space-2);
 }
+.site-footer__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-footer__contacts li { margin: 0; }
 .site-footer p { max-width: none; }
 .site-footer__copy {
-  margin-top: var(--space-8);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-rule);
   font-size: var(--fs-sm);
   color: var(--color-muted);
   text-align: center;
+}
+@media (min-width: 700px) {
+  .site-footer__top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* === Narrow container variant === */
