@@ -437,8 +437,8 @@ details ul {
 }
 .price-card__media {
   position: relative;
-  margin: 0 0 var(--space-5);
-  aspect-ratio: 4 / 5;
+  margin: 0 var(--space-3) var(--space-6);
+  aspect-ratio: 1 / 1;
 }
 .price-card__media-bg {
   display: block;
@@ -454,9 +454,7 @@ details ul {
 }
 .price-card__media-overlay {
   position: absolute;
-  bottom: -6%;
-  right: -4%;
-  width: 45%;
+  width: 55%;
   aspect-ratio: 1 / 1;
   display: block;
   border-radius: 50%;
@@ -470,6 +468,18 @@ details ul {
   object-fit: cover;
   display: block;
   border-radius: 50%;
+}
+.price-card:nth-child(1) .price-card__media-overlay {
+  bottom: -8%;
+  left: -8%;
+}
+.price-card:nth-child(2) .price-card__media-overlay {
+  bottom: -8%;
+  right: -8%;
+}
+.price-card:nth-child(3) .price-card__media-overlay {
+  top: -8%;
+  right: -8%;
 }
 .price-card__name {
   font-size: var(--fs-xl);
