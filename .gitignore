@@ -5,5 +5,5 @@ dist/
 *.log
 assets/img/_src/
 
-# Lokální server cíl (původně dist/, nyní docs/ pro GitHub Pages)
-# docs/ je commitnuté
+# docs/ se buildí v GitHub Action, lokálně slouží jen pro npm run serve
+docs/
