@@ -314,20 +314,20 @@ main > .hero:first-child {
 /* === Crafts === */
 .crafts {
   padding-block: var(--space-8) var(--space-12);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-12);
 }
 .crafts__heading {
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
   text-align: center;
 }
 .crafts__lead {
   font-size: var(--fs-xl);
   color: var(--color-muted);
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--space-10);
   text-align: center;
   text-wrap: balance;
+}
+.craft + .craft {
+  margin-top: var(--space-12);
 }
 .craft {
   display: grid;
@@ -642,7 +642,8 @@ details ul {
   gap: var(--space-6);
 }
 .contact__text p {
-  margin-top: var(--space-3);
+  margin-top: var(--space-2);
+  line-height: 1.45;
 }
 .contact__text p:first-child { margin-top: 0; }
 .contact__media { margin: 0; }
