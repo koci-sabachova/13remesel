@@ -64,17 +64,21 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* === Site header === */
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: none;
 }
 .site-header.is-floating {
   position: fixed;
-  background: var(--color-bg);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-rule);
   transition: transform 220ms ease;
 }
@@ -225,6 +229,11 @@ main > .hero:first-child {
   color: var(--color-ink);
 }
 .btn--ghost:hover { background: var(--color-ink); color: var(--color-bg); }
+.btn--pill {
+  border-radius: 999px;
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--fs-lg);
+}
 .btn__price,
 .btn__label { display: block; }
 .btn__label {
@@ -276,6 +285,11 @@ main > .hero:first-child {
 .hero--poem .hero__overlay {
   background: rgba(255, 255, 255, 0.25);
 }
+.hero--home .hero__overlay { background: rgba(255, 255, 255, 0.1); }
+.hero--home .hero__content { text-align: left; }
+.hero--home .hero__title { color: #fff; font-weight: 700; }
+.hero--home .hero__lead { margin-left: 0; margin-right: 0; color: #fff; font-weight: 700; font-size: clamp(1rem, 0.8rem + 0.6vw, 1.25rem); }
+.hero--home .hero__cta { justify-content: flex-start; }
 .hero__content {
   position: relative;
   text-align: center;
@@ -316,7 +330,7 @@ main > .hero:first-child {
   padding-block: var(--space-8) var(--space-12);
 }
 .crafts__heading {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-3);
   text-align: center;
 }
 .crafts__lead {
@@ -325,6 +339,56 @@ main > .hero:first-child {
   margin: 0 auto var(--space-10);
   text-align: center;
   text-wrap: balance;
+}
+.crafts__intro {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+.crafts__intro .crafts__heading,
+.crafts__intro .crafts__lead {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: var(--space-3);
+}
+.crafts__slideshow {
+  position: relative;
+  aspect-ratio: 960 / 649;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.crafts__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: crafts-fade 25s infinite;
+}
+.crafts__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.crafts__slide:nth-child(1) { animation-delay: 0s; }
+.crafts__slide:nth-child(2) { animation-delay: 5s; }
+.crafts__slide:nth-child(3) { animation-delay: 10s; }
+.crafts__slide:nth-child(4) { animation-delay: 15s; }
+.crafts__slide:nth-child(5) { animation-delay: 20s; }
+@keyframes crafts-fade {
+  0%, 20%, 100% { opacity: 0; }
+  4%, 16% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .crafts__slide { animation: none; }
+  .crafts__slide:nth-child(1) { opacity: 1; }
+}
+@media (min-width: 900px) {
+  .crafts__intro {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    align-items: center;
+  }
 }
 .craft + .craft {
   margin-top: var(--space-12);

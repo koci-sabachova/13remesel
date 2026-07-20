@@ -150,10 +150,10 @@ heroPreload: <link rel="preload" as="image" type="image/jpeg" imagesrcset="/asse
 </script>
 <main id="main">
 
-  <section class="hero">
+  <section class="hero hero--home">
     <picture class="hero__bg" aria-hidden="true">
       <source type="image/avif" srcset="/assets/img/hero-home-480.avif 480w, /assets/img/hero-home-960.avif 960w, /assets/img/hero-home-1600.avif 1600w" sizes="100vw">
-      <img src="/assets/img/hero-home-1600.jpg" srcset="/assets/img/hero-home-480.jpg 480w, /assets/img/hero-home-960.jpg 960w, /assets/img/hero-home-1600.jpg 1600w" sizes="100vw" alt="" width="1600" height="1081" fetchpriority="high" decoding="async">
+      <img src="/assets/img/hero-home-1600.jpg" srcset="/assets/img/hero-home-480.jpg 480w, /assets/img/hero-home-960.jpg 960w, /assets/img/hero-home-1600.jpg 1600w" sizes="100vw" alt="" width="1600" height="1067" fetchpriority="high" decoding="async">
     </picture>
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="container hero__content">
@@ -163,14 +163,86 @@ heroPreload: <link rel="preload" as="image" type="image/jpeg" imagesrcset="/asse
       <p class="hero__lead">Od výběru domu po uchování ovoce.</p>
       <p class="hero__lead">Budu Váš hodinový děd.</p>
       <div class="hero__cta">
-        <a class="btn btn--ghost" href="tel:+420776700801">Zavolat 776 700 801</a>
-        <a class="btn btn--ghost js-mail" data-u="ondrej" data-d="trinactremesel.cz" data-text="keep" href="#">Napsat e-mail</a>
+        <a class="btn btn--primary btn--pill" href="tel:+420776700801">776 700 801</a>
       </div>
     </div>
   </section>
 
   <section class="container crafts">
-    <h2 class="crafts__heading">K čemu Vám budu?</h2>
+    <div class="crafts__intro">
+      <div class="crafts__intro-text">
+        <h2 class="crafts__heading">K čemu Vám budu?</h2>
+        <p class="crafts__lead">Dvanáct a jedno řemeslo, kterými spolu můžeme projít.</p>
+      </div>
+      <div class="crafts__slideshow" aria-hidden="true">
+        <picture class="crafts__slide">
+          <source type="image/avif" srcset="/assets/img/slide-1-480.avif 480w, /assets/img/slide-1-960.avif 960w, /assets/img/slide-1-1200.avif 1200w" sizes="(min-width: 900px) 45vw, 100vw">
+          <img src="/assets/img/slide-1-960.jpg" srcset="/assets/img/slide-1-480.jpg 480w, /assets/img/slide-1-960.jpg 960w, /assets/img/slide-1-1200.jpg 1200w" sizes="(min-width: 900px) 45vw, 100vw" alt="" width="960" height="649" loading="lazy" decoding="async">
+        </picture>
+        <picture class="crafts__slide">
+          <source type="image/avif" srcset="/assets/img/slide-2-480.avif 480w, /assets/img/slide-2-960.avif 960w, /assets/img/slide-2-1200.avif 1200w" sizes="(min-width: 900px) 45vw, 100vw">
+          <img src="/assets/img/slide-2-960.jpg" srcset="/assets/img/slide-2-480.jpg 480w, /assets/img/slide-2-960.jpg 960w, /assets/img/slide-2-1200.jpg 1200w" sizes="(min-width: 900px) 45vw, 100vw" alt="" width="960" height="649" loading="lazy" decoding="async">
+        </picture>
+        <picture class="crafts__slide">
+          <source type="image/avif" srcset="/assets/img/slide-3-480.avif 480w, /assets/img/slide-3-960.avif 960w, /assets/img/slide-3-1200.avif 1200w" sizes="(min-width: 900px) 45vw, 100vw">
+          <img src="/assets/img/slide-3-960.jpg" srcset="/assets/img/slide-3-480.jpg 480w, /assets/img/slide-3-960.jpg 960w, /assets/img/slide-3-1200.jpg 1200w" sizes="(min-width: 900px) 45vw, 100vw" alt="" width="960" height="649" loading="lazy" decoding="async">
+        </picture>
+        <picture class="crafts__slide">
+          <source type="image/avif" srcset="/assets/img/slide-4-480.avif 480w, /assets/img/slide-4-960.avif 960w, /assets/img/slide-4-1200.avif 1200w" sizes="(min-width: 900px) 45vw, 100vw">
+          <img src="/assets/img/slide-4-960.jpg" srcset="/assets/img/slide-4-480.jpg 480w, /assets/img/slide-4-960.jpg 960w, /assets/img/slide-4-1200.jpg 1200w" sizes="(min-width: 900px) 45vw, 100vw" alt="" width="960" height="649" loading="lazy" decoding="async">
+        </picture>
+        <picture class="crafts__slide">
+          <source type="image/avif" srcset="/assets/img/slide-5-480.avif 480w, /assets/img/slide-5-960.avif 960w, /assets/img/slide-5-1200.avif 1200w" sizes="(min-width: 900px) 45vw, 100vw">
+          <img src="/assets/img/slide-5-960.jpg" srcset="/assets/img/slide-5-480.jpg 480w, /assets/img/slide-5-960.jpg 960w, /assets/img/slide-5-1200.jpg 1200w" sizes="(min-width: 900px) 45vw, 100vw" alt="" width="960" height="649" loading="lazy" decoding="async">
+        </picture>
+      </div>
+    </div>
+
+    <article class="craft" id="zednictvi">
+      <figure class="craft__media">
+        <picture>
+          <source type="image/avif" srcset="/assets/img/zednictvi-480.avif 480w, /assets/img/zednictvi-960.avif 960w, /assets/img/zednictvi-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/zednictvi-960.jpg" srcset="/assets/img/zednictvi-480.jpg 480w, /assets/img/zednictvi-960.jpg 960w, /assets/img/zednictvi-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Zednictví — práce na staré chalupě, vápenná omítka." width="1200" height="1200" loading="lazy" decoding="async">
+        </picture>
+      </figure>
+      <div class="craft__body">
+        <h3>Nemůžete na to nikoho sehnat?</h3>
+        <p class="craft__lead">Většina zednických prací se dá udělat svépomocí, a to od lití podlah po nahození zdí. Chce to dobrý materiál, nářadí a hlavně se toho nebát.</p>
+        <p class="craft__tag">Naučím vás zedničit. Co se postaví s láskou, drží, i když padá.</p>
+        <div class="craft__more" data-collapsed="true">
+          <div class="craft__more-inner">
+          <p>Je to hodně o čase a šikovnosti. Bourání opravdu není věc, na kterou si musíte při dobrém zdraví někoho zvát. Maximálně se riskantnější operace zkonzultují se statikem. Naučím vás namíchat pořádnou vápennou maltu, klidně bez cementu, nahodit zeď nebo obložit sprchový kout. Vážím si zručnosti našich předků. Starý dům často nesnese moderní materiály, nevhodné řešení vám brzy vrátí solným výkvětem na zdi za postelí. Ale jsou případy, kdy i ytong nebo montovaná příčka jsou fajn — snažím se je ale alespoň vizuálně zamaskovat a používat v nejnutnějším minimu.</p>
+          <p>Znám rozumné statiky, co se vyjádří k vaší obávané prasklině ve zdi. Buďte v klidu, staré domy padají dlouho.</p>
+          <p>Pokud chcete stavět fakt přírodně a zadarmo, dá se udělat příbytek ze slámy a hlíny, bydlet v chatě nebo jurtě. Každý má svůj styl a potřeby.</p>
+          </div>
+          <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
+        </div>
+        <p class="craft__tag">Čemu přijdeme na kloub:</p>
+        <div class="craft__more" data-collapsed="true">
+          <div class="craft__more-inner">
+          <ul>
+            <li>Jaké stavební materiály pro můj dům?</li>
+            <li>Z čeho je naše chalupa a jak navázat?</li>
+            <li>Sádrokarton, nebo rákos?</li>
+            <li>Jak naložit vápno, kde a jak dlouho ho skladovat?</li>
+            <li>Vápenná omítka, nebo hliněná?</li>
+            <li>Praskliny ve zdi, mám se bát?</li>
+            <li>Perlinka, ytong, lepidlo, nebo plná cihla?</li>
+            <li>Přizdívka mokré zdi?</li>
+            <li>Hydroizolace domu — podřezat, nebo jen odkopat?</li>
+            <li>Kolik mě bude stát injektáž a má smysl?</li>
+            <li>Beton do chalupy, ale za jakých podmínek?</li>
+            <li>Má smysl tepelná izolace podlahy a stropů?</li>
+            <li>Provětrávané podlahy — drahé a levné řešení.</li>
+            <li>Suché zídky z místního kamene.</li>
+            <li>Kde koupit pěkné cihly?</li>
+            <li>Chce to statika?</li>
+          </ul>
+          </div>
+          <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
+        </div>
+      </div>
+    </article>
 
     <article class="craft" id="prohlidka">
       <figure class="craft__media">
@@ -534,28 +606,6 @@ heroPreload: <link rel="preload" as="image" type="image/jpeg" imagesrcset="/asse
       </div>
     </article>
 
-    <article class="craft" id="zivot-na-venkove">
-      <figure class="craft__media">
-        <picture>
-          <source type="image/avif" srcset="/assets/img/zivot-na-venkove-480.avif 480w, /assets/img/zivot-na-venkove-960.avif 960w, /assets/img/zivot-na-venkove-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
-          <img src="/assets/img/zivot-na-venkove-960.jpg" srcset="/assets/img/zivot-na-venkove-480.jpg 480w, /assets/img/zivot-na-venkove-960.jpg 960w, /assets/img/zivot-na-venkove-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Polární záře nad chalupou — život na venkově." width="1200" height="1200" loading="lazy" decoding="async">
-        </picture>
-      </figure>
-      <div class="craft__body">
-        <h3>Jak se z toho všeho nezbláznit?</h3>
-        <p class="craft__lead">Život mimo město, ať už v chalupě, nebo v maringotce, má i svoje úskalí.</p>
-        <p class="craft__tag">Ukážu vám cestu ke spokojenému životu na venkově s dětmi nebo o samotě. Rádce pro lidi, kteří začínají něco nového, lepšího.</p>
-        <div class="craft__more" data-collapsed="true">
-          <div class="craft__more-inner">
-          <p>Na venkov jsem se z města stěhoval dvakrát, podruhé s rodinou. Můžeme si povídat o tom, jak naplnit potřeby všech členů domácnosti v novém prostředí, o domácím vzdělávání dětí, jak navázat dobré vztahy s okolím. Jak jednat s řemeslníky, aby vás všichni hned nenatáhli. Jak jednat s předsedou družstva o pronájmu pozemků, s myslivci o přemnožené zvěři. Nejhorší asi je přijít na nové místo a hned všechny poslat do háje, protože člověk má často pocit, že ví všechno líp než vesnický lid.</p>
-          <p>Povím vám, jak získávat radost a dopaminy jinak než z Instagramu a koukáním na videa, jak někdo něco dělá.</p>
-          <p>Nebo máte pocit, že s dětmi nic neuděláte? Že tu chalupu nikdy takhle nedáte do kupy? Můžu s vámi sdílet vlastní zkušenosti ze zapojení dětí, poradím, co s nimi postavit na dvorku za atrakce a z čeho a jak s dětmi mít dobrý a upřímný vztah. I díky tomu pak můžeme s větší nadějí doufat, že až nám přestanou ruce sloužit, děti přijedou na pomoc, nebo se dokonce budou chtít vrátit tam, kde vyrostly. Ale to jen pokud jim ten opravdický život v dětství neznechutíme.</p>
-          </div>
-          <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
-        </div>
-      </div>
-    </article>
-
     <article class="craft" id="svarovani">
       <figure class="craft__media">
         <picture>
@@ -592,46 +642,22 @@ heroPreload: <link rel="preload" as="image" type="image/jpeg" imagesrcset="/asse
       </div>
     </article>
 
-    <article class="craft" id="zednictvi">
+    <article class="craft" id="zivot-na-venkove">
       <figure class="craft__media">
         <picture>
-          <source type="image/avif" srcset="/assets/img/zednictvi-480.avif 480w, /assets/img/zednictvi-960.avif 960w, /assets/img/zednictvi-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
-          <img src="/assets/img/zednictvi-960.jpg" srcset="/assets/img/zednictvi-480.jpg 480w, /assets/img/zednictvi-960.jpg 960w, /assets/img/zednictvi-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Zednictví — práce na staré chalupě, vápenná omítka." width="1200" height="1200" loading="lazy" decoding="async">
+          <source type="image/avif" srcset="/assets/img/zivot-na-venkove-480.avif 480w, /assets/img/zivot-na-venkove-960.avif 960w, /assets/img/zivot-na-venkove-1200.avif 1200w" sizes="(min-width: 900px) 50vw, 100vw">
+          <img src="/assets/img/zivot-na-venkove-960.jpg" srcset="/assets/img/zivot-na-venkove-480.jpg 480w, /assets/img/zivot-na-venkove-960.jpg 960w, /assets/img/zivot-na-venkove-1200.jpg 1200w" sizes="(min-width: 900px) 50vw, 100vw" alt="Polární záře nad chalupou — život na venkově." width="1200" height="1200" loading="lazy" decoding="async">
         </picture>
       </figure>
       <div class="craft__body">
-        <h3>Nemůžete na to nikoho sehnat?</h3>
-        <p class="craft__lead">Většina zednických prací se dá udělat svépomocí, a to od lití podlah po nahození zdí. Chce to dobrý materiál, nářadí a hlavně se toho nebát.</p>
-        <p class="craft__tag">Naučím vás zedničit. Co se postaví s láskou, drží, i když padá.</p>
+        <h3>Jak se z toho všeho nezbláznit?</h3>
+        <p class="craft__lead">Život mimo město, ať už v chalupě, nebo v maringotce, má i svoje úskalí.</p>
+        <p class="craft__tag">Ukážu vám cestu ke spokojenému životu na venkově s dětmi nebo o samotě. Rádce pro lidi, kteří začínají něco nového, lepšího.</p>
         <div class="craft__more" data-collapsed="true">
           <div class="craft__more-inner">
-          <p>Je to hodně o čase a šikovnosti. Bourání opravdu není věc, na kterou si musíte při dobrém zdraví někoho zvát. Maximálně se riskantnější operace zkonzultují se statikem. Naučím vás namíchat pořádnou vápennou maltu, klidně bez cementu, nahodit zeď nebo obložit sprchový kout. Vážím si zručnosti našich předků. Starý dům často nesnese moderní materiály, nevhodné řešení vám brzy vrátí solným výkvětem na zdi za postelí. Ale jsou případy, kdy i ytong nebo montovaná příčka jsou fajn — snažím se je ale alespoň vizuálně zamaskovat a používat v nejnutnějším minimu.</p>
-          <p>Znám rozumné statiky, co se vyjádří k vaší obávané prasklině ve zdi. Buďte v klidu, staré domy padají dlouho.</p>
-          <p>Pokud chcete stavět fakt přírodně a zadarmo, dá se udělat příbytek ze slámy a hlíny, bydlet v chatě nebo jurtě. Každý má svůj styl a potřeby.</p>
-          </div>
-          <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
-        </div>
-        <p class="craft__tag">Čemu přijdeme na kloub:</p>
-        <div class="craft__more" data-collapsed="true">
-          <div class="craft__more-inner">
-          <ul>
-            <li>Jaké stavební materiály pro můj dům?</li>
-            <li>Z čeho je naše chalupa a jak navázat?</li>
-            <li>Sádrokarton, nebo rákos?</li>
-            <li>Jak naložit vápno, kde a jak dlouho ho skladovat?</li>
-            <li>Vápenná omítka, nebo hliněná?</li>
-            <li>Praskliny ve zdi, mám se bát?</li>
-            <li>Perlinka, ytong, lepidlo, nebo plná cihla?</li>
-            <li>Přizdívka mokré zdi?</li>
-            <li>Hydroizolace domu — podřezat, nebo jen odkopat?</li>
-            <li>Kolik mě bude stát injektáž a má smysl?</li>
-            <li>Beton do chalupy, ale za jakých podmínek?</li>
-            <li>Má smysl tepelná izolace podlahy a stropů?</li>
-            <li>Provětrávané podlahy — drahé a levné řešení.</li>
-            <li>Suché zídky z místního kamene.</li>
-            <li>Kde koupit pěkné cihly?</li>
-            <li>Chce to statika?</li>
-          </ul>
+          <p>Na venkov jsem se z města stěhoval dvakrát, podruhé s rodinou. Můžeme si povídat o tom, jak naplnit potřeby všech členů domácnosti v novém prostředí, o domácím vzdělávání dětí, jak navázat dobré vztahy s okolím. Jak jednat s řemeslníky, aby vás všichni hned nenatáhli. Jak jednat s předsedou družstva o pronájmu pozemků, s myslivci o přemnožené zvěři. Nejhorší asi je přijít na nové místo a hned všechny poslat do háje, protože člověk má často pocit, že ví všechno líp než vesnický lid.</p>
+          <p>Povím vám, jak získávat radost a dopaminy jinak než z Instagramu a koukáním na videa, jak někdo něco dělá.</p>
+          <p>Nebo máte pocit, že s dětmi nic neuděláte? Že tu chalupu nikdy takhle nedáte do kupy? Můžu s vámi sdílet vlastní zkušenosti ze zapojení dětí, poradím, co s nimi postavit na dvorku za atrakce a z čeho a jak s dětmi mít dobrý a upřímný vztah. I díky tomu pak můžeme s větší nadějí doufat, že až nám přestanou ruce sloužit, děti přijedou na pomoc, nebo se dokonce budou chtít vrátit tam, kde vyrostly. Ale to jen pokud jim ten opravdický život v dětství neznechutíme.</p>
           </div>
           <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
         </div>
