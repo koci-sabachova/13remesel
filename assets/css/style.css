@@ -362,7 +362,7 @@ main > .hero:first-child {
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: crafts-fade 25s infinite;
+  animation: crafts-fade 15s infinite;
 }
 .crafts__slide img {
   width: 100%;
@@ -371,13 +371,16 @@ main > .hero:first-child {
   display: block;
 }
 .crafts__slide:nth-child(1) { animation-delay: 0s; }
-.crafts__slide:nth-child(2) { animation-delay: 5s; }
-.crafts__slide:nth-child(3) { animation-delay: 10s; }
-.crafts__slide:nth-child(4) { animation-delay: 15s; }
-.crafts__slide:nth-child(5) { animation-delay: 20s; }
+.crafts__slide:nth-child(2) { animation-delay: 3s; }
+.crafts__slide:nth-child(3) { animation-delay: 6s; }
+.crafts__slide:nth-child(4) { animation-delay: 9s; }
+.crafts__slide:nth-child(5) { animation-delay: 12s; }
 @keyframes crafts-fade {
-  0%, 20%, 100% { opacity: 0; }
-  4%, 16% { opacity: 1; }
+  0% { opacity: 0; }
+  3.33% { opacity: 1; }
+  20% { opacity: 1; }
+  23.33% { opacity: 0; }
+  100% { opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .crafts__slide { animation: none; }
@@ -389,6 +392,7 @@ main > .hero:first-child {
     gap: var(--space-8);
     align-items: center;
   }
+  .crafts__slideshow { order: -1; }
 }
 .craft + .craft {
   margin-top: var(--space-12);
