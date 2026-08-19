@@ -885,3 +885,110 @@ details ul {
   font-size: var(--fs-sm);
   letter-spacing: 0.05em;
 }
+
+/* Svatba — fotogalerie + lightbox */
+.wedding { padding-block: var(--space-8) var(--space-16); }
+.wedding__header { margin-bottom: var(--space-8); }
+.wedding__header h1 { letter-spacing: -0.02em; }
+.wedding__header p { color: var(--color-muted); }
+
+.wedding-gallery {
+  list-style: none;
+  margin: 0 0 var(--space-12);
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+@media (min-width: 700px) {
+  .wedding-gallery { grid-template-columns: repeat(3, 1fr); }
+}
+.wedding-gallery__item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.wedding-gallery__item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.2s ease;
+}
+.wedding-gallery__item:hover img,
+.wedding-gallery__item:focus-visible img {
+  transform: scale(1.03);
+}
+
+.wedding__vows {
+  max-width: var(--max-prose);
+  margin-inline: auto;
+}
+.wedding__vows h2 { margin-bottom: var(--space-5); }
+.wedding__vows p + p { margin-top: var(--space-4); }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  padding: var(--space-6);
+}
+.lightbox[hidden] { display: none; }
+.lightbox__img {
+  max-width: min(90vw, 70rem);
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  border: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+.lightbox__close:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.lightbox__close {
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.75rem;
+}
+.lightbox__prev,
+.lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 2rem;
+}
+.lightbox__prev { left: var(--space-5); }
+.lightbox__next { right: var(--space-5); }
+@media (max-width: 600px) {
+  .lightbox__prev, .lightbox__next { width: 2.5rem; height: 2.5rem; font-size: 1.5rem; }
+  .lightbox__prev { left: var(--space-2); }
+  .lightbox__next { right: var(--space-2); }
+}

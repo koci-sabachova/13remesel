@@ -1,0 +1,44 @@
+<!--meta
+title: Svatba · Ondřej Pelikán | Třináct řemesel
+description: Soukromá stránka se svatební fotogalerií a sliby.
+url: /svatba/
+ogImage: og-default.jpg
+heroPreload:
+robots: <meta name="robots" content="noindex, nofollow">
+-->
+<main id="main">
+
+  <!-- TODO fotky: nahraď soubory v assets/img/svatba/foto-01.svg … foto-06.svg
+       skutečnými fotkami (stejný název, klidně .jpg/.avif — jen uprav příponu
+       níž u <img> i data-full). Klidně přidej další <li> pro víc fotek. -->
+
+  <section class="container wedding">
+    <header class="wedding__header">
+      <h1>Svatba</h1>
+      <p>Fotogalerie a sliby — soukromá stránka, není v menu ani ve vyhledávačích.</p>
+    </header>
+
+    <ul class="wedding-gallery">
+      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-01.svg"><img src="/assets/img/svatba/foto-01.svg" alt="Svatební fotka 1" width="800" height="600" loading="lazy"></button></li>
+      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-02.svg"><img src="/assets/img/svatba/foto-02.svg" alt="Svatební fotka 2" width="800" height="600" loading="lazy"></button></li>
+      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-03.svg"><img src="/assets/img/svatba/foto-03.svg" alt="Svatební fotka 3" width="800" height="600" loading="lazy"></button></li>
+      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-04.svg"><img src="/assets/img/svatba/foto-04.svg" alt="Svatební fotka 4" width="800" height="600" loading="lazy"></button></li>
+      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-05.svg"><img src="/assets/img/svatba/foto-05.svg" alt="Svatební fotka 5" width="800" height="600" loading="lazy"></button></li>
+      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-06.svg"><img src="/assets/img/svatba/foto-06.svg" alt="Svatební fotka 6" width="800" height="600" loading="lazy"></button></li>
+    </ul>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button type="button" class="lightbox__close" aria-label="Zavřít">×</button>
+      <button type="button" class="lightbox__prev" aria-label="Předchozí fotka">‹</button>
+      <img class="lightbox__img" src="" alt="">
+      <button type="button" class="lightbox__next" aria-label="Další fotka">›</button>
+    </div>
+
+    <section class="wedding__vows">
+      <h2>Svatební sliby</h2>
+      <p><em>Sem přijde text slibů — zatím ukázkový placeholder, doplníme později.</em></p>
+      <p>„Slibuji, že s tebou budu sdílet radosti i starosti, že tě budu podporovat na cestě, kterou si spolu vybereme, a že budu stát po tvém boku ve zdraví i v nemoci, v dobrém i zlém, po celý náš společný život.“</p>
+    </section>
+  </section>
+
+</main>

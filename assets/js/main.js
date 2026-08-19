@@ -53,6 +53,74 @@ document.querySelectorAll('.craft__more-toggle').forEach((btn) => {
   });
 });
 
+// Svatební galerie — lightbox s navigací šipkami
+const galleryItems = document.querySelectorAll('.wedding-gallery__item');
+const lightbox = document.getElementById('lightbox');
+if (galleryItems.length && lightbox) {
+  const lightboxImg = lightbox.querySelector('.lightbox__img');
+  const btnClose = lightbox.querySelector('.lightbox__close');
+  const btnPrev = lightbox.querySelector('.lightbox__prev');
+  const btnNext = lightbox.querySelector('.lightbox__next');
+  const items = Array.from(galleryItems);
+  let currentIndex = 0;
+  let lastFocused = null;
+
+  const show = (index) => {
+    currentIndex = (index + items.length) % items.length;
+    const item = items[currentIndex];
+    lightboxImg.src = item.dataset.full;
+    lightboxImg.alt = item.querySelector('img')?.alt || '';
+  };
+
+  const open = (index, trigger) => {
+    lastFocused = trigger;
+    show(index);
+    lightbox.hidden = false;
+    btnClose.focus();
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+    if (lastFocused) lastFocused.focus();
+  };
+
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => open(index, item));
+  });
+
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', () => show(currentIndex - 1));
+  btnNext.addEventListener('click', () => show(currentIndex + 1));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  const focusable = Array.from(lightbox.querySelectorAll('button'));
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(currentIndex - 1);
+    else if (e.key === 'ArrowRight') show(currentIndex + 1);
+    else if (e.key === 'Tab') {
+      // Focus trap — Tab uvnitř lightboxu nesmí utéct na obsah pod overlayem
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+}
+
 // Anti-spam-bot e-mail: rekonstrukce mailto: za běhu z data-u + data-d
 document.querySelectorAll('.js-mail').forEach((el) => {
   const u = el.dataset.u;

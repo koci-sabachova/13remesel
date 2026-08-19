@@ -15,8 +15,8 @@ const BASE_PATH = process.env.BASE_PATH || '';
 
 function prefixUrls(html) {
   if (!BASE_PATH) return html;
-  // href, src, content attributes — absolutní URLs (začínají /)
-  html = html.replace(/(href|src|content)=(["'])\/(?!\/)/g, `$1=$2${BASE_PATH}/`);
+  // href, src, content, data-full attributes — absolutní URLs (začínají /)
+  html = html.replace(/(href|src|content|data-full)=(["'])\/(?!\/)/g, `$1=$2${BASE_PATH}/`);
   // srcset má více URL oddělených čárkami
   html = html.replace(/(srcset)=(["'])([^"']+)\2/g, (m, attr, q, value) => {
     const newValue = value.split(',').map(item => {
@@ -67,6 +67,7 @@ for (const file of pages) {
     description: '',
     url: file === 'index.html' ? '/' : `/${slug}/`,
     ogImage: 'og-default.jpg',
+    robots: '',
   };
   const vars = { ...defaults, ...meta };
 
@@ -88,7 +89,7 @@ for (const file of pages) {
   mkdirSync(outDir, { recursive: true });
   writeFileSync(join(outDir, 'index.html'), prefixUrls(html));
 
-  sitemap.push(vars.url);
+  if (!vars.robots.includes('noindex')) sitemap.push(vars.url);
   console.log(`✓ ${vars.url.padEnd(28)} ${(html.length / 1024).toFixed(1)} KB`);
 }
 
@@ -99,7 +100,7 @@ if (existsSync(ASSETS)) {
   });
 }
 
-for (const f of ['404.html', 'robots.txt', 'llms.txt', 'CNAME', 'google.html', 'favicon.ico']) {
+for (const f of ['404.html', 'robots.txt', 'llms.txt', 'CNAME', 'google.html', 'favicon.ico', '.htaccess']) {
   if (existsSync(join(ROOT, f))) copyFileSync(join(ROOT, f), join(DIST, f));
 }
 
