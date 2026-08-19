@@ -286,6 +286,9 @@ main > .hero:first-child {
   background: rgba(255, 255, 255, 0.25);
 }
 .hero--home .hero__overlay { background: rgba(255, 255, 255, 0.1); }
+.hero--wedding .hero__overlay { background: rgba(0, 0, 0, 0.15); }
+.hero--wedding .hero__title { color: #fff; font-weight: 700; }
+.hero--wedding .hero__bg img { object-position: center top; }
 .hero--home .hero__content { text-align: left; }
 .hero--home .hero__title { color: #fff; font-weight: 700; }
 .hero--home .hero__lead { margin-left: 0; margin-right: 0; color: #fff; font-weight: 700; font-size: clamp(1rem, 0.8rem + 0.6vw, 1.25rem); }
@@ -887,6 +890,42 @@ details ul {
 }
 
 /* Svatba — fotogalerie + lightbox */
+.gate {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-6);
+}
+.gate[hidden] { display: none; }
+.gate__form {
+  max-width: 24rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.gate__form h1 { margin: 0; }
+.gate__form p { color: var(--color-muted); margin: 0; }
+.gate__form input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 2px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-md);
+  font-family: var(--font-base);
+  text-align: center;
+}
+.gate__form input:focus {
+  outline: none;
+  border-color: var(--color-ink);
+}
+.gate__error {
+  color: #b3261e;
+  font-size: var(--fs-sm);
+  margin: 0;
+}
+
 .wedding { padding-block: var(--space-8) var(--space-16); }
 .wedding__header { margin-bottom: var(--space-8); }
 .wedding__header h1 { letter-spacing: -0.02em; }
@@ -894,10 +933,11 @@ details ul {
 
 .wedding-gallery {
   list-style: none;
-  margin: 0 0 var(--space-12);
+  margin: var(--space-12) 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: var(--space-3);
 }
 @media (min-width: 700px) {
@@ -930,8 +970,35 @@ details ul {
   max-width: var(--max-prose);
   margin-inline: auto;
 }
+.wedding__vows + .wedding__vows { margin-top: var(--space-12); }
 .wedding__vows h2 { margin-bottom: var(--space-5); }
+.wedding__vows h3 { margin-bottom: var(--space-3); }
+.wedding__vows h3 + .craft__more { margin-top: 0; }
+.wedding__vows .craft__more { margin-bottom: var(--space-8); }
 .wedding__vows p + p { margin-top: var(--space-4); }
+.wedding__vows .craft__more[data-collapsed="true"] .craft__more-inner {
+  max-height: 8em;
+}
+.wedding__vows .craft__more[data-collapsed="true"] .craft__more-inner::after {
+  height: 4.5em;
+}
+
+.wedding__diagram {
+  max-width: var(--max-narrow);
+  margin: var(--space-12) auto;
+  text-align: center;
+}
+.wedding__diagram img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-rule);
+}
+.wedding__diagram figcaption {
+  margin-top: var(--space-3);
+  color: var(--color-muted);
+  font-size: var(--fs-sm);
+}
 
 .lightbox {
   position: fixed;

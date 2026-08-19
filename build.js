@@ -52,6 +52,18 @@ function template(str, vars) {
   return str.replace(/\{\{(\w+)\}\}/g, (_, k) => vars[k] ?? '');
 }
 
+// Generuje <li> galerie z assets/img/<slug>/manifest.json (viz svatba.html)
+function buildGallery(slug) {
+  const manifestPath = join(ASSETS, 'img', slug, 'manifest.json');
+  if (!existsSync(manifestPath)) return '';
+  const photos = JSON.parse(readFileSync(manifestPath, 'utf8'));
+  return photos.map((p, i) => {
+    const thumb = `/assets/img/${slug}/foto-${p.num}-thumb.jpg`;
+    const full = `/assets/img/${slug}/foto-${p.num}-full.jpg`;
+    return `      <li><button type="button" class="wedding-gallery__item" data-full="${full}"><img src="${thumb}" alt="Svatební fotka ${i + 1}" width="${p.w}" height="${p.h}" loading="lazy" decoding="async"></button></li>`;
+  }).join('\n');
+}
+
 const pages = existsSync(PAGES)
   ? readdirSync(PAGES).filter(f => f.endsWith('.html'))
   : [];
@@ -68,8 +80,9 @@ for (const file of pages) {
     url: file === 'index.html' ? '/' : `/${slug}/`,
     ogImage: 'og-default.jpg',
     robots: '',
+    gallery: '',
   };
-  const vars = { ...defaults, ...meta };
+  const vars = { ...defaults, ...meta, gallery: buildGallery(slug) };
 
   const html = [
     '<!doctype html>',
@@ -79,7 +92,7 @@ for (const file of pages) {
     '</head>',
     '<body>',
     header,
-    body,
+    template(body, vars),
     footer,
     '</body>',
     '</html>',

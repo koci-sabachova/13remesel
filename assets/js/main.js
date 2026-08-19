@@ -9,6 +9,39 @@ if (toggle && nav) {
   });
 }
 
+// Svatba — jednoduchá "slušnostní" zámka heslem (není to skutečná bezpečnost,
+// heslo jde vyčíst ze zdrojového kódu — jen brání náhodnému procházení odkazu)
+const gate = document.getElementById('gate');
+const gateContent = document.getElementById('wedding-content');
+if (gate && gateContent) {
+  const GATE_PASSWORD = 'kořen';
+  const GATE_KEY = 'svatba-gate-ok';
+  const gateForm = document.getElementById('gate-form');
+  const gateInput = document.getElementById('gate-password');
+  const gateError = document.getElementById('gate-error');
+
+  const unlock = () => {
+    gate.hidden = true;
+    gateContent.hidden = false;
+  };
+
+  if (sessionStorage.getItem(GATE_KEY) === '1') {
+    unlock();
+  } else {
+    gateForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (gateInput.value.trim().toLowerCase() === GATE_PASSWORD) {
+        sessionStorage.setItem(GATE_KEY, '1');
+        unlock();
+      } else {
+        gateError.hidden = false;
+        gateInput.value = '';
+        gateInput.focus();
+      }
+    });
+  }
+}
+
 // Dynamic year in footer
 const yearEl = document.querySelector('[data-year]');
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());

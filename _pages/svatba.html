@@ -8,23 +8,122 @@ robots: <meta name="robots" content="noindex, nofollow">
 -->
 <main id="main">
 
-  <!-- TODO fotky: nahraď soubory v assets/img/svatba/foto-01.svg … foto-06.svg
-       skutečnými fotkami (stejný název, klidně .jpg/.avif — jen uprav příponu
-       níž u <img> i data-full). Klidně přidej další <li> pro víc fotek. -->
+  <!-- Galerie se generuje automaticky při buildu (build.js) ze souborů
+       assets/img/svatba/foto-XXX-full.jpg / foto-XXX-thumb.jpg + manifest.json.
+       Chceš-li přidat/ubrat fotky, stačí upravit tuhle složku a přebuildovat. -->
 
-  <section class="container wedding">
-    <header class="wedding__header">
+  <div class="gate" id="gate">
+    <form class="gate__form" id="gate-form">
       <h1>Svatba</h1>
-      <p>Fotogalerie a sliby — soukromá stránka, není v menu ani ve vyhledávačích.</p>
-    </header>
+      <p>Tahle stránka je jen pro rodinu a kamarády — zadejte heslo.</p>
+      <label class="visually-hidden" for="gate-password">Heslo</label>
+      <input type="password" id="gate-password" name="password" autocomplete="off" required>
+      <button type="submit" class="btn btn--primary">Vstoupit</button>
+      <p class="gate__error" id="gate-error" hidden>Špatné heslo, zkuste to znovu.</p>
+    </form>
+  </div>
+
+  <div id="wedding-content" hidden>
+    <section class="hero hero--wedding">
+      <picture class="hero__bg" aria-hidden="true">
+        <img src="/assets/img/svatba/hero-960.jpg" srcset="/assets/img/svatba/hero-480.jpg 480w, /assets/img/svatba/hero-960.jpg 960w" sizes="100vw" alt="" width="960" height="738" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <h1 class="hero__title">Svatba</h1>
+      </div>
+    </section>
+
+    <section class="container wedding">
+
+    <section class="wedding__vows">
+      <h2>Proslovy</h2>
+
+      <h3>Proč jsme tady</h3>
+      <div class="craft__more" data-collapsed="true">
+        <div class="craft__more-inner">
+          <p>Děkuju Mileně za slovo.</p>
+          <p>Možná vás zajímá, proč jsme teď zrovna tady. Možná se vám honí i hlavou, proč jsme se odstěhovali takhle na konec světa.</p>
+          <p>Jsme oba původem z Prahy (tím myslím jednu generaci zpátky), naše starší kořeny sahají do jiných krajů, hlavně vesnic. Možná právě tyhle zděděné zkušenosti předků nás vedly k tomu opustit město a usadit se tady, na Ratiborci. Po narození Ervína v nás zrála touha město opustit. Ale není to jednoduché, přijít na nové místo a zakořeňovat!</p>
+          <p>Pokračováním našeho usazení je tahle slavnost svatby. Stvrzení našeho rozhodnutí, že tady chceme spolu žít a vychovávat děti.</p>
+          <p>Věříme totiž, že naše potomstvo taky najde stejně spokojený život jako my. I když se třeba na čas vrátí do města.</p>
+          <p>A stejně jako my máme pod kůží rachtání tramvají na Plzeňský, syčení dveří autobusu, ledadla nad údolím motolského potoka, budou mít naše děti pod kůží tuhle krajinu, zimní nekonečné mlhy, letní praskot šišek na slunci, vlaštovky v maštali a zvuk klepání kosy.</p>
+          <p>A teď jsme se tady sešli i s Vámi, našimi nejbližšími. No, máme hodně nejbližších lidí a za to jsme nesmírně rádi a děkujeme Vám!</p>
+        </div>
+        <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
+      </div>
+
+      <h3>Svědkové a drny</h3>
+      <div class="craft__more" data-collapsed="true">
+        <div class="craft__more-inner">
+          <p>Tak vítejte na našem oblíbeném místě!</p>
+          <p>Jste skvělý, že jste s náma i v tomhle nečase.</p>
+          <p>Chtěl bych jen vysvětlit, proč nám svědčí zrovna šest přátel.</p>
+          <p>V dávných dobách, když lidi neuměli moc psát a číst, bylo zvykem mít na svatbě více svědků (stejně jako třeba při větší výplatě řemeslníků). Svědectví bylo historicky více než papír. Často se taky stávalo, že po letech jeden z manželů tvrdil, že žádná svatba nebyla, a tak si lid naučil to pojistit větším počtem osob.</p>
+          <p>My číst sice umíme, ale chtěli jsme oslovit více lidí, se kterými jsme trávili různá období našich životů. S někým se známe 25, s někým jen 5 let. Toto jsou lidé, kteří nás formovali, a jsme rádi, že vyhověli naší prosbě o svědectví.</p>
+          <p>Svědci přivezli ze svých oblíbených míst kus travního drnu, který dnes umístíme zde do země. Drn, který vyryjeme z místa našeho oddání, povezeme domů zase na tomto elegantním voze. U nás doma dostanou svědkové na oplátku stejně velký drn z našeho dvora. Tak to jen, abyste věděli, co to tady podnikáme.</p>
+        </div>
+        <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
+      </div>
+    </section>
+
+    <figure class="wedding__diagram">
+      <img src="/assets/img/svatba/drn-diagram.jpg" alt="Technický nákres — kruh o průměru 38 cm rozdělený na 6 dílů po 60°, návod na řezání drnu pro svědky." width="900" height="886" loading="lazy">
+      <figcaption>Nákres na řezání drnu pro šest svědků.</figcaption>
+    </figure>
+
+    <section class="wedding__vows">
+      <h2>Svatební sliby</h2>
+
+      <h3>Slib nevěsty</h3>
+      <div class="craft__more" data-collapsed="true">
+        <div class="craft__more-inner">
+          <p>Ano, vstupuji.</p>
+          <p>Volím si Tě za svého muže, s kterým chci dál kultivovat sebe navzájem i místo, kde žijeme.</p>
+          <p>Volím si Tě proto, že mezi námi je vzájemná úcta. Úcta k našim potřebám, touhám a snům. Ale i respekt k našim slabostem a příběhům, které jsme po cestě životem posbírali a přinášíme je nyní do našeho vztahu.</p>
+          <p>Volím si Tě proto, že vnímám, jak spolu bok po boku můžeme růst. Že jdeme společnou cestou. Že nám některé věci v životě jdou s lehkostí, a díky tomu máme kapacity na to, dělat — pro nás — důležité věci. Vnímám, že spolu hodnotově souzníme na většině úrovních — a tam, kde ne, jsme k sobě vstřícní a hledáme možnosti, jak se protnout.</p>
+          <p>Volím si Tě proto, že Ti důvěřuji.</p>
+          <p>Volím si Tě proto, že jsi otevřený. Otevřený tomu otevřeně komunikovat. Učíme se to oba. Spolu, s našimi dětmi, rodinou, přáteli i lidmi, se kterými to třeba není příjemné. Ale oba víme i cítíme, že na schopnosti autenticky sdílet naše pocity i potřeby, stojí téměř vše. Jsi otevřený novým podnětům, zkušenostem i zážitkům. Neodsuzuješ a priori.</p>
+          <p>Volím si Tě i pro Tvé vlastnosti a schopnosti, které mně chybí a Ty mě jimi inspiruješ nebo mi díky nim ulehčuješ život. Obdivuji Tvoji schopnost číst, jací lidé jsou, Tvoji schopnost si hrát, vidět krásu nebo svět z jiného úhlu pohledu, který ostatním zůstává ukrytý. Fascinuje mě Tvoje schopnost jít si za svými vizemi a naplňovat je, i Tvoje schopnost dělat věci hned.</p>
+          <p>Cítím, že vedle sebe mám dospělého muže, na kterého se mohu spolehnout, se kterým se nebojím čelit všem výzvám, které nám život přinese. Muže, který dokáže jednat s klidem, s respektem k ostatním i k sobě, věcně, ale zároveň citlivě. Ano, Tvoje citlivost je dar, se kterým se oba učíme zacházet.</p>
+          <p>Volím si Tě proto, že Ti není lhostejný svět kolem nás a snažíš se ho v rámci svých možností ovlivňovat.</p>
+          <p>Volím si Tě proto, že jsi dobrý člověk.</p>
+          <p>Volím si Tě proto, že jsi tvůrčí a vynalézavý. Že je pro Tebe větší příležitost něco nají, opravit nebo si přivolat z vesmíru, než jet v 22h večer do nejbližšího supermarketu a tam si to koupit… Šetříš náš rodinný rozpočet i planetu. Cením si toho!</p>
+          <p>Jsem vděčná, že jsi otcem našich dětí i třetím rodičem Vincentovi. Úplně to s Tebou vyhrály! Dokážeš si s nimi hrát. Naprosto autenticky. Často to baví nejvíc Tebe :) Vymýšlíš pro ně skvělé podněty — často jen z kusu klacku nebo překvapivé kombinace obyčejných věcí. Ukazuješ jim a učíš je věci, které dávají smysl. Přistupuješ k nim s respektem, dáváš jim svobodu, ale zároveň ctíš svoje hranice. Jsi báječným a hlavně přítomným tátou. Jsem vděčná za to, že žijeme tak, že spolu opravdu můžeme být — jíst, sedět na zápraží, chodit kolem kopce, spát, povídat si a smát se.</p>
+          <p>Volím si Tě i proto, že se mi líbíš, voníš mi a vnímám, s jakou péčí, trpělivostí a pochopením mě miluješ.</p>
+          <p>Mám vizi toho, jak můžeme naplňovat náš vztah. Přeju si pro nás mnohé:</p>
+          <ul>
+            <li>ať můžeme dál tvořit — každý sám za sebe, s podporou toho druhého, společně jako partneři, i jako rodina a komunita</li>
+            <li>přeju si pro nás pevné, důvěrné a živé vztahy</li>
+            <li>přeju nám všem otevřenou a jasnou komunikaci</li>
+            <li>ale nejvíc nám přeju, ať spolu dál můžeme být a žít — úplně obyčejně a v jednoduchosti. A ať i v nadcházejících letech a desetiletích dokážeme nakrmit naše děti a přátelé a žít s pokorou na zemi a v krajině, ke které se jako lidstvo chováme macešsky.</li>
+          </ul>
+          <p>S pokorou i radostí v srdci pro sebe otevíráme tento svazek — všemu, co přijde. Upevňujeme ho nyní tímto obřadem, na tomto místě, za přítomnosti a pozornosti všech našich blízkých.</p>
+          <p>Děkuji!</p>
+        </div>
+        <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
+      </div>
+
+      <h3>Slib ženicha</h3>
+      <div class="craft__more" data-collapsed="true">
+        <div class="craft__more-inner">
+          <p>Ano. Jen bych ještě něco dodal.</p>
+          <p>Jolano, ženo mých snů! Když jsem ti před rokem četl tu dlouhou báseň, která končí žádostí o ruku, zdaleka jsem si nedovedl představit, že to bude vypadat takhle. Že budeme stát zrovna tady a budou na nás upřené oči tolika lidí. Bylo ale jasné, že budeme nervózní, že se budu chvět já i hlas.</p>
+          <p>Před rokem mi došlo, že žijeme fakt krásnej život a že bych to chtěl ukázat i všem lidem, co nás znají.</p>
+          <p>Za to, jakej jsem nyní, vděčím hodně tobě. Bez tebe bych seděl sám v nechvalický chalupě a čekal, až někdo přijede na návštěvu. Ty mi dáváš sílu dělat dobrý věci, stojíš při mě a ve všem mě podporuješ, i když je to někdy těžký nebo mám zrovna úzkosti z mlhy. To, jakým způsobem se staráme o děti, je taky tvoje velká zásluha. Vládneš neuvěřitelně krásně naší světnici, bez tebe by děti jedly jen vejce a špagety.</p>
+          <p>Jsem hrozně rád, že máme vpodstatě ve všem shodu. To je evidentně vzácný a moc si toho vážím. Náš největší konflikt je zřejmě nevyždímaná houbička ve dřezu. Mohl bych ti teď před svědky a panem starostou slíbit, že se jí naučím ždímat. Ale budu rád, když se ještě společně zamyslíme nad mým argumentem, že namočená houbička je ihned připravená k použití a neplýtvá se voda na její namočení. Věřím, že v tom nakonec jako vždy najdeme shodu.</p>
+          <p>V budoucnosti nás vidím starý na dvoře, všechno hotový a nabílený, děti přijíždí na víkendy — nebo teda pokud to pochytí od nás — mimo víkendy, a snad nám pomůžou, abychom se z těch latifundií ke stáru nezbláznili. Snad nám pomůžou udělat dříví na zimu. A jestli tady bude všude bezlesá step, pomůžou nám sbírat na topení mech. A kdyby ne, pořešíme to jinak.</p>
+          <p>Vidím nás i mrtvý. Myslím i na naši smrt. A na to, že až zmizíme, budou naši potomci vzpomínat na dětství tady a věřím, že půjdou v našich stopách. Budou sklízet ovoce ze stromů, který jsme s nima sadili. Teda pokud tady nebude ta step.</p>
+          <p>Budeme mrtví, ale budeme žít věčně skrz naše děti.</p>
+          <p>Jolano, jsem s tebou nade vše rád a vím, že to tak zůstane!</p>
+          <p>A k tomu mi dopomáhej hůl.</p>
+        </div>
+        <button type="button" class="craft__more-toggle" aria-expanded="false"><span class="craft__more-read">Číst dál</span><span class="craft__more-close">Sbalit</span></button>
+      </div>
+    </section>
 
     <ul class="wedding-gallery">
-      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-01.svg"><img src="/assets/img/svatba/foto-01.svg" alt="Svatební fotka 1" width="800" height="600" loading="lazy"></button></li>
-      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-02.svg"><img src="/assets/img/svatba/foto-02.svg" alt="Svatební fotka 2" width="800" height="600" loading="lazy"></button></li>
-      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-03.svg"><img src="/assets/img/svatba/foto-03.svg" alt="Svatební fotka 3" width="800" height="600" loading="lazy"></button></li>
-      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-04.svg"><img src="/assets/img/svatba/foto-04.svg" alt="Svatební fotka 4" width="800" height="600" loading="lazy"></button></li>
-      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-05.svg"><img src="/assets/img/svatba/foto-05.svg" alt="Svatební fotka 5" width="800" height="600" loading="lazy"></button></li>
-      <li><button type="button" class="wedding-gallery__item" data-full="/assets/img/svatba/foto-06.svg"><img src="/assets/img/svatba/foto-06.svg" alt="Svatební fotka 6" width="800" height="600" loading="lazy"></button></li>
+      {{gallery}}
     </ul>
 
     <div class="lightbox" id="lightbox" hidden>
@@ -33,12 +132,7 @@ robots: <meta name="robots" content="noindex, nofollow">
       <img class="lightbox__img" src="" alt="">
       <button type="button" class="lightbox__next" aria-label="Další fotka">›</button>
     </div>
-
-    <section class="wedding__vows">
-      <h2>Svatební sliby</h2>
-      <p><em>Sem přijde text slibů — zatím ukázkový placeholder, doplníme později.</em></p>
-      <p>„Slibuji, že s tebou budu sdílet radosti i starosti, že tě budu podporovat na cestě, kterou si spolu vybereme, a že budu stát po tvém boku ve zdraví i v nemoci, v dobrém i zlém, po celý náš společný život.“</p>
     </section>
-  </section>
+  </div>
 
 </main>

@@ -7,3 +7,8 @@ assets/img/_src/
 
 # docs/ se buildí v GitHub Action, lokálně slouží jen pro npm run serve
 docs/
+
+# nezpracované podklady ke svatbě — originály fotek a PDF/Pages zdroje,
+# do repa jde jen zpracovaný výstup v assets/img/svatba/
+/svatba-galerie/
+/svatba/
