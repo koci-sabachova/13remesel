@@ -1025,16 +1025,39 @@ details ul {
   max-width: var(--max-prose);
   margin: 0 auto var(--space-12);
 }
+.wedding__program h2 { margin: var(--space-10) 0 var(--space-5); }
+.wedding__program h2:first-child { margin-top: 0; }
 .wedding__program h3 { margin: var(--space-6) 0 var(--space-3); }
 .wedding__program h3:first-of-type { margin-top: 0; }
+.wedding__program p + p { margin-top: var(--space-4); }
+.wedding__program ul { padding-left: var(--space-5); }
+.wedding__program li + li { margin-top: var(--space-2); }
 .wedding__program dl {
   margin: 0;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(4rem, auto) 1fr;
   gap: var(--space-2) var(--space-4);
 }
 .wedding__program dt { font-weight: 700; }
 .wedding__program dd { margin: 0; color: var(--color-muted); }
+/* Osoby a obsazení — dlouhé popisky, radši pod sebe než v úzkém sloupci */
+.wedding__program h2 + dl {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.wedding__program h2 + dl dt { margin-top: var(--space-4); }
+.wedding__program h2 + dl dt:first-child { margin-top: 0; }
+.wedding__program h2 + dl dd { margin-top: 2px; }
+
+.wedding__program-photo {
+  margin: var(--space-8) auto;
+  max-width: 30rem;
+}
+.wedding__program-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
 
 .lightbox {
   position: fixed;
