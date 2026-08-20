@@ -1009,9 +1009,11 @@ details ul {
   margin-bottom: var(--space-5);
 }
 .wedding__qr img {
-  width: 60%;
-  max-width: 20rem;
+  display: block;
+  width: 30%;
+  max-width: 10rem;
   height: auto;
+  margin: 0 auto;
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-rule);
 }
@@ -1052,6 +1054,9 @@ details ul {
 .wedding__program-photo {
   margin: var(--space-8) auto;
   max-width: 30rem;
+}
+.wedding__program-photo--wide {
+  max-width: 100%;
 }
 .wedding__program-photo img {
   width: 100%;
