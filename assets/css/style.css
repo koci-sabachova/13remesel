@@ -1023,6 +1023,8 @@ details ul {
 .wedding__note h2 { margin-bottom: var(--space-3); }
 .wedding__upload { text-align: center; }
 
+.wedding__gallery-title { margin-bottom: var(--space-5); }
+
 .wedding__program {
   max-width: var(--max-prose);
   margin: 0 auto var(--space-12);
