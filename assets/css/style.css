@@ -927,7 +927,7 @@ details ul {
 }
 
 .wedding { padding-block: var(--space-8) var(--space-16); }
-.wedding__header { margin-bottom: var(--space-8); }
+.wedding__header { max-width: var(--max-prose); margin: 0 auto var(--space-8); }
 .wedding__header h1 { letter-spacing: -0.02em; }
 .wedding__header p { color: var(--color-muted); }
 
@@ -1020,6 +1020,10 @@ details ul {
   max-width: var(--max-prose);
   margin: var(--space-12) auto;
 }
+.wedding__note-cta {
+  text-align: center;
+  margin-top: var(--space-5);
+}
 .wedding__note h2 { margin-bottom: var(--space-3); }
 
 .wedding__program {
@@ -1060,6 +1064,9 @@ details ul {
 .wedding__program-photo img {
   width: 100%;
   height: auto;
+}
+.wedding__program-photo--rounded img {
+  border-radius: var(--radius-lg);
 }
 .wedding__program-photo-trigger {
   display: block;
