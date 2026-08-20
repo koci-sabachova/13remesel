@@ -14,11 +14,13 @@ if (toggle && nav) {
 const gate = document.getElementById('gate');
 const gateContent = document.getElementById('wedding-content');
 if (gate && gateContent) {
-  const GATE_PASSWORD = 'kořen';
+  const GATE_PASSWORD = 'koren'; // porovnává se bez diakritiky, projde "kořen" i "koren"
   const GATE_KEY = 'svatba-gate-ok';
   const gateForm = document.getElementById('gate-form');
   const gateInput = document.getElementById('gate-password');
   const gateError = document.getElementById('gate-error');
+
+  const stripDiacritics = (str) => str.normalize('NFD').replace(/[̀-ͯ]/g, '');
 
   const unlock = () => {
     gate.hidden = true;
@@ -30,7 +32,7 @@ if (gate && gateContent) {
   } else {
     gateForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (gateInput.value.trim().toLowerCase() === GATE_PASSWORD) {
+      if (stripDiacritics(gateInput.value.trim().toLowerCase()) === GATE_PASSWORD) {
         sessionStorage.setItem(GATE_KEY, '1');
         unlock();
       } else {
