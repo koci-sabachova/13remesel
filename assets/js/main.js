@@ -88,8 +88,8 @@ document.querySelectorAll('.craft__more-toggle').forEach((btn) => {
   });
 });
 
-// Svatební galerie — lightbox s navigací šipkami
-const galleryItems = document.querySelectorAll('.wedding-gallery__item');
+// Svatební galerie + leták — lightbox s navigací šipkami
+const galleryItems = document.querySelectorAll('.wedding-gallery__item, .wedding__program-photo-trigger');
 const lightbox = document.getElementById('lightbox');
 if (galleryItems.length && lightbox) {
   const lightboxImg = lightbox.querySelector('.lightbox__img');
