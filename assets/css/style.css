@@ -1037,6 +1037,7 @@ details ul {
   .wedding__poem { padding: var(--space-10) var(--space-8); }
 }
 .wedding__poem p { color: #fff; }
+.wedding__poem-title { font-size: var(--fs-h3); margin-bottom: var(--space-4); }
 .wedding__poem-photo {
   max-width: 40rem;
   margin: var(--space-8) auto 0;
