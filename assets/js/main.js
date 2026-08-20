@@ -14,7 +14,7 @@ if (toggle && nav) {
 const gate = document.getElementById('gate');
 const gateContent = document.getElementById('wedding-content');
 if (gate && gateContent) {
-  const GATE_PASSWORD = 'koren'; // porovnává se bez diakritiky, projde "kořen" i "koren"
+  const GATE_PASSWORD = 'cas'; // porovnává se bez diakritiky, projde "čas" i "cas"
   const GATE_KEY = 'svatba-gate-ok';
   const gateForm = document.getElementById('gate-form');
   const gateInput = document.getElementById('gate-password');
