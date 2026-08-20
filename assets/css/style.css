@@ -1038,7 +1038,7 @@ details ul {
 }
 .wedding__poem p { color: #fff; }
 .wedding__poem-photo {
-  max-width: 28rem;
+  max-width: 40rem;
   margin: var(--space-8) auto 0;
 }
 .wedding__poem-photo img {
