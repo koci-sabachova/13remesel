@@ -1020,6 +1020,7 @@ details ul {
   max-width: var(--max-prose);
   margin: var(--space-12) auto;
 }
+.wedding__note h2 { margin-bottom: var(--space-3); }
 
 .wedding__program {
   max-width: var(--max-prose);
