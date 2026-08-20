@@ -1025,6 +1025,28 @@ details ul {
 
 .wedding__gallery-title { margin-bottom: var(--space-5); }
 
+.wedding__poem {
+  max-width: var(--max-prose);
+  margin: var(--space-12) auto;
+  background: #000;
+  color: #fff;
+  padding: var(--space-8) var(--space-5);
+  border-radius: var(--radius-lg);
+}
+@media (min-width: 768px) {
+  .wedding__poem { padding: var(--space-10) var(--space-8); }
+}
+.wedding__poem p { color: #fff; }
+.wedding__poem-photo {
+  max-width: 28rem;
+  margin: var(--space-8) auto 0;
+}
+.wedding__poem-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .wedding__program {
   max-width: var(--max-prose);
   margin: 0 auto var(--space-12);
