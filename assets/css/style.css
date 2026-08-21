@@ -1003,6 +1003,9 @@ details ul {
   text-align: center;
   margin: var(--space-8) auto;
 }
+.wedding__toplist img {
+  margin: 0 auto;
+}
 
 .wedding__qr {
   max-width: var(--max-narrow);
