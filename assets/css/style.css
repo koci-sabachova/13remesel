@@ -999,6 +999,11 @@ details ul {
   font-size: var(--fs-sm);
 }
 
+.wedding__toplist {
+  text-align: center;
+  margin: var(--space-8) auto;
+}
+
 .wedding__qr {
   max-width: var(--max-narrow);
   margin: var(--space-12) auto;
