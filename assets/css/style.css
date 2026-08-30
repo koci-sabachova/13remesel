@@ -302,6 +302,20 @@ main > .hero:first-child {
   letter-spacing: -0.01em;
   line-height: 1.25;
 }
+.hero--bottom {
+  align-items: end;
+}
+.poem-out {
+  display: inline-block;
+}
+.poem-out__url-wrap {
+  padding-block: var(--space-8);
+  text-align: center;
+}
+.poem-out__url {
+  font-size: var(--fs-md);
+  color: var(--color-muted);
+}
 .hero__lead {
   margin: var(--space-4) auto 0;
   font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
@@ -508,7 +522,7 @@ main > .hero:first-child {
   color: #8c8c8c;
 }
 .craft__more-toggle:hover {
-  font-weight: 700;
+  text-decoration: underline;
 }
 .craft__more-read::after { content: "…"; }
 .craft__more[data-collapsed="false"] .craft__more-read,
