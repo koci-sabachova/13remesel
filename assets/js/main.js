@@ -156,6 +156,13 @@ if (galleryItems.length && lightbox) {
   });
 }
 
+// Respekt k prefers-reduced-motion: zastavit smyčkové video (zůstane na poster snímku)
+const craftsVideo = document.querySelector('.crafts__slide-video');
+if (craftsVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  craftsVideo.removeAttribute('autoplay');
+  craftsVideo.pause();
+}
+
 // Anti-spam-bot e-mail: rekonstrukce mailto: za běhu z data-u + data-d
 document.querySelectorAll('.js-mail').forEach((el) => {
   const u = el.dataset.u;
